@@ -73,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 15, ../sass/screen.scss */
-.container .one-whole, .container .one-half, .container .one-third, .container .two-thirds, .container .one-fourth, .container .three-fourths, .container .one-fifth, .container .two-fifths, .container .three-fifths, .container .four-fifths {
+.container .one-whole, .container .one-half, .container .one-third, .container .two-thirds, .container .one-fourth, .container .three-fourths, .container .one-fifth, .container .two-fifths, .container .three-fifths, .container .four-fifths, .container .one-sixth, .container .five-sixths {
   float: left;
   direction: ltr;
   margin-right: 0;
@@ -124,107 +124,135 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .container .four-fifths {
   width: 80%;
 }
+/* line 39, ../sass/screen.scss */
+.container .one-sixth {
+  width: 16.66667%;
+}
 /* line 40, ../sass/screen.scss */
+.container .five-sixths {
+  width: 83.33333%;
+}
+/* line 42, ../sass/screen.scss */
 .container .push-one-whole {
   position: relative;
   left: 100%;
 }
-/* line 41, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .container .push-one-half {
   position: relative;
   left: 50%;
 }
-/* line 42, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .container .push-one-third {
   position: relative;
   left: 33.33333%;
 }
-/* line 43, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .container .push-two-thirds {
   position: relative;
   left: 66.66667%;
 }
-/* line 44, ../sass/screen.scss */
+/* line 46, ../sass/screen.scss */
 .container .push-one-fourth {
   position: relative;
   left: 25%;
 }
-/* line 45, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .container .push-three-fourths {
   position: relative;
   left: 75%;
 }
-/* line 46, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 .container .push-one-fifth {
   position: relative;
   left: 20%;
 }
-/* line 47, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 .container .push-two-fifths {
   position: relative;
   left: 40%;
 }
-/* line 48, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .container .push-three-fifths {
   position: relative;
   left: 60%;
 }
-/* line 49, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .container .push-four-fifths {
   position: relative;
   left: 80%;
 }
-/* line 51, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
+.container .push-one-sixth {
+  position: relative;
+  left: 16.66667%;
+}
+/* line 53, ../sass/screen.scss */
+.container .push-five-sixths {
+  position: relative;
+  left: 83.33333%;
+}
+/* line 55, ../sass/screen.scss */
 .container .pull-one-whole {
   position: relative;
   right: 100%;
 }
-/* line 52, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .container .pull-one-half {
   position: relative;
   right: 50%;
 }
-/* line 53, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 .container .pull-one-third {
   position: relative;
   right: 33.33333%;
 }
-/* line 54, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 .container .pull-two-thirds {
   position: relative;
   right: 66.66667%;
 }
-/* line 55, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .container .pull-one-fourth {
   position: relative;
   right: 25%;
 }
-/* line 56, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .container .pull-three-fourths {
   position: relative;
   right: 75%;
 }
-/* line 57, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .container .pull-one-fifth {
   position: relative;
   right: 20%;
 }
-/* line 58, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .container .pull-two-fifths {
   position: relative;
   right: 40%;
 }
-/* line 59, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .container .pull-three-fifths {
   position: relative;
   right: 60%;
 }
-/* line 60, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 .container .pull-four-fifths {
   position: relative;
   right: 80%;
 }
-/* line 62, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
+.container .push-one-sixth {
+  position: relative;
+  left: 16.66667%;
+}
+/* line 66, ../sass/screen.scss */
+.container .push-five-sixths {
+  position: relative;
+  left: 83.33333%;
+}
+/* line 68, ../sass/screen.scss */
 .container:after {
   content: "";
   display: table;

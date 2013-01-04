@@ -24,7 +24,7 @@ $direction: ltr;
 	
 	.row { clear: both; }
 	
-	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths { @extend %column; }
+	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .five-sixths { @extend %column; }
 
 	.one-whole { width: 100%; }
 	.one-half { width: 50%; }
@@ -36,6 +36,8 @@ $direction: ltr;
 	.two-fifths { width: 40%; }
 	.three-fifths { width: 60%; }
 	.four-fifths { width: 80%; }
+	.one-sixth { width: 16.66667%; }
+	.five-sixths { width: 83.33333%; }
 
 	.push-one-whole { position: relative; left: 100%; }
 	.push-one-half { position: relative; left: 50%; }
@@ -47,6 +49,8 @@ $direction: ltr;
 	.push-two-fifths { position: relative; left: 40%; }
 	.push-three-fifths { position: relative; left: 60%; }
 	.push-four-fifths { position: relative; left: 80%; }
+	.push-one-sixth { position: relative; left: 16.66667%; }
+	.push-five-sixths { position: relative; left: 83.33333%; }
 
 	.pull-one-whole { position: relative; right: 100%; }
 	.pull-one-half { position: relative; right: 50%; }
@@ -58,6 +62,8 @@ $direction: ltr;
 	.pull-two-fifths { position: relative; right: 40%; }
 	.pull-three-fifths { position: relative; right: 60%; }
 	.pull-four-fifths { position: relative; right: 80%; }
+	.push-one-sixth { position: relative; left: 16.66667%; }
+	.push-five-sixths { position: relative; left: 83.33333%; }
 
 	&:after {
 		content: "";
