@@ -9,12 +9,13 @@ Features:
 * Easy right to left (rtl) alignment (grid and text) (defaults to left (ltr) alignment).
 * Infinite intelligent grid nesting.
 * Push/pull capabilities with nesting.
+* Can turn on responsive design at parent grid or row level by adding a .react class.
 * Lightweight
 * Cross browser support (IE7+, Chrome, Firefox, Safari) (compatibility still in early testing)
 * Easy to use grid markup:
 
 <pre><code>
-	&lt;div class="container"&gt;
+	&lt;div class="grid"&gt;
 		&lt;div class="row"&gt;
 			&lt;div class="one-whole"&gt;&lt;/div&gt;
 		&lt;/div&gt;
@@ -25,7 +26,7 @@ Features:
 	&lt;/div&gt;
 </code></pre>
 
-* Available grid classes:
+* Available column classes:
 	- .one-whole
 	- .one-half
 	- .one-third, .two-thirds
@@ -33,15 +34,18 @@ Features:
 	- .one-fifth, .two-fifths, .three-fifths, .four-fifths
 	- .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths
 
-* Every grid class can be pushed/pulled for example:
+* Every column class can be pushed/pulled for example:
 
 <pre><code>
-	&lt;div class="container"&gt;
-		&lt;div class="row"&gt;
+	&lt;div class="g"&gt;
+		&lt;div class="r"&gt;
 			&lt;div class="one-fourth"&gt;&lt;/div&gt;
 			&lt;div class="three-fourths pull-one-sixth"&gt;&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 </code></pre>
+
+* .grid class can be shortened to .g
+* .row class can be shortened to .r
 
 This is a work in progress. Thanks for checking it out.
