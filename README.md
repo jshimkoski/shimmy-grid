@@ -49,6 +49,6 @@ Features:
 * .grid class can be shortened to .g
 * .row class can be shortened to .r
 
-* Gutters are not used in shimmy-grid. This grid is purely structural and not for presentation. Use a .gutter class for parent elements inside columns to handle this (as done in the demo page).
+* Gutters are not created with shimmy-grid. This grid is purely structural and not for presentation. Use a .gutter class for parent elements inside columns to handle this (as done in the demo page).
 
 This is a work in progress. Thanks for checking it out.
