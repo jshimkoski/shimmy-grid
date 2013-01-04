@@ -9,10 +9,10 @@ Features:
 * Easy right to left (rtl) alignment (grid and text) (defaults to left (ltr) alignment).
 * Infinite intelligent grid nesting.
 * Push/pull capabilities (even with nesting).
-* Can turn on responsive design at parent grid level or row level (even nested rows) by adding a .react class (not compatible with IE 8 and below).
+* Can turn on responsive design at parent grid level or row level (even nested rows) by adding a .react class.
 * Easy response width size adjustment (default is < 768px).
-* Lightweight
-* Cross browser support (IE6+, Chrome, Firefox, Safari, Opera) (compatibility still in early testing)
+* Lightweight.
+* Cross browser support (IE6+, Chrome, Firefox, Safari, Opera) (responsive design not compatible with IE 8 and below).
 * Easy to use (and remember) markup:
 
 <pre><code>
