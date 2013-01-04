@@ -50,6 +50,6 @@ Features:
 	&lt;/div&gt;
 </code></pre>
 
-''PLEASE NOTE:'' Gutters are not created with shimmy-grid. This grid is purely structural and not for presentation. Use a .gutter class for parent elements inside columns to handle this (as done in the demo page).
+PLEASE NOTE: Gutters are not created with shimmy-grid. This grid is purely structural and not for presentation. Use a .gutter class for parent elements inside columns to handle this (as done in the demo page).
 
 This is a work in progress. Thanks for checking it out.
