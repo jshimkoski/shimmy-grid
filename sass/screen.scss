@@ -1,0 +1,58 @@
+@import "compass/reset";
+
+$width: 960px;
+$float: left;
+$direction: ltr;
+
+%container {
+	*zoom: 1;
+	max-width: $width;
+	_width: $width;
+	padding: 0;
+	margin: 0 auto;
+}
+
+%column {
+	float: $float;
+	direction: $direction;
+	margin-right: 0;
+	display: inline;
+}
+
+.container {
+	@extend %container;
+	
+	.row { clear: both; }
+	
+	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths { @extend %column; }
+	
+	.one-whole { width: 100%; }
+	.one-half { width: 50%; }
+	.one-third { width: 33.33333%; }
+	.two-thirds { width: 66.66667%; }
+	.one-fourth { width: 25%; }
+	.three-fourths { width: 75%; }
+	.one-fifth { width: 20%; }
+	.two-fifths { width: 40%; }
+	.three-fifths { width: 60%; }
+	.four-fifths { width: 80%; }
+	
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// for demo
+
+body {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 28px;
+}
+
+p {
+	padding: 10px;
+	border: 1px solid red;
+}

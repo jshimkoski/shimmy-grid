@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+		<link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+</head>
+<body>
+
+	<div class="container">
+		<h1>All Grid Sizes</h1>
+		<div class="row">
+			<div class="one-whole"><p>one whole</p></div>
+		</div>
+		<div class="row">
+			<div class="one-half"><p>one half</p></div>
+			<div class="one-half"><p>one half</p></div>
+		</div>
+		<div class="row">
+			<div class="one-third"><p>one third</p></div>
+			<div class="two-thirds"><p>two thirds</p></div>
+		</div>
+		<div class="row">
+			<div class="one-fourth"><p>one fourth</p></div>
+			<div class="three-fourths"><p>three fourth</p></div>
+		</div>
+		<div class="row">
+			<div class="one-fifth"><p>one fifth</p></div>
+			<div class="four-fifths"><p>four fifths</p></div>
+		</div>
+		<div class="row">
+			<div class="two-fifths"><p>two fifths</p></div>
+			<div class="three-fifths"><p>three fifths</p></div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<h1>Nested Grids</h1>
+		<div class="row">
+			<div class="one-fifth"><p>one fifth</p></div>
+			<div class="four-fifths">
+				<div class="row">
+					<div class="one-third"><p style="background:#EEF;">one third</p></div>
+					<div class="two-thirds"><p style="background:#EEF;">two thirds</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="three-fourths">
+				<div class="row">
+					<div class="one-third"><p style="background:#EEF;">one third</p></div>
+					<div class="two-thirds">
+						<div class="row">
+							<div class="one-half"><p style="background:#FEE;">one half</p></div>
+							<div class="one-half"><p style="background:#FEE;">one half</p></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="one-fourth"><p>one fourth</p></div>
+		</div>
+	</div>
+
+</body>
+</html>
