@@ -1,7 +1,7 @@
 shimmy-grid
 ===========
 
-Succinct Sass/Compass CSS grid layout with all brains and no fluff.
+Succinct Sass/Compass CSS Grid with all brains and no fluff.
 
 Features:
 
