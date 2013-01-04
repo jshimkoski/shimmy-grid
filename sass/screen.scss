@@ -24,8 +24,7 @@ $direction: ltr;
 
 	.row { clear: both; }
 
-	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .five-sixths { @extend %column; }
-	.two-fourths, .three-sixths, .two-sixths, .four-sixths { @extend %column; }
+	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .two-fourths, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths { @extend %column; }
 
 	.one-whole { width: 100%; }
 	.one-half, .two-fourths, .three-sixths { width: 50%; }
