@@ -35,6 +35,8 @@ Features:
 	- .two-fifths
 	- .three-fifths
 	- .four-fifths
+	- .one-sixth
+	- .five-sixths
 
 * Every grid class can be pushed/pulled by prepending push- or pull- for example:
 	- .push-one-fifth
