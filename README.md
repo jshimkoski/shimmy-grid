@@ -50,6 +50,12 @@ Features:
 	&lt;/div&gt;
 </code></pre>
 
-PLEASE NOTE: Gutters are not created with shimmy-grid. This grid is purely structural and not for presentation. Use a .gutter class for parent elements inside columns to handle this (as done in the demo page).
+FAQs:
+
+Q: Will you add gutters to shimmy-grid?
+A: shimmy-grid is strictly structural. Use a .gutter class for parent elements inside columns instead (as done in the demo page).
+
+Q: Why isn't responsive design supported in IE8 and below?
+A: I counter with: Why support browsers that are not available on portable devices?
 
 This is a work in progress. Thanks for checking it out.
