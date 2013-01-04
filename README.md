@@ -11,15 +11,17 @@ Features:
 * Push/Pull capabilities.
 * Easy to use grid markup:
 
-	<div class="container">
-		<div class="row">
-			<div class="one-whole"></div>
-		</div>
-		<div class="row">
-			<div class="one-third"></div>
-			<div class="two-thirds"></div>
-		</div>
-	</div>
+<code>
+	&lt;div class="container"&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="one-whole"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="one-third"&gt;&lt;/div&gt;
+			&lt;div class="two-thirds"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</code>
 
 * Available grid classes:
 	- .one-whole
