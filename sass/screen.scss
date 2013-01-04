@@ -1,6 +1,7 @@
 @import "compass/reset";
 
 $width: 960px;
+$mobile-max: 768px;
 $float: left;
 $direction: ltr;
 
@@ -21,7 +22,7 @@ $direction: ltr;
 
 @mixin react() {
 	&.react {
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: $mobile-max) {
 			.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .two-fourths, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths { width: 100%; }
 		}
 	}
