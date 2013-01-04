@@ -9,14 +9,13 @@ $direction: ltr;
 	*zoom: 1;
 	max-width: $width;
 	_width: $width;
-	padding: 0;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 %column {
 	float: $float;
 	direction: $direction;
-	margin-right: 0;
 	display: inline;
 }
 
@@ -73,8 +72,8 @@ $direction: ltr;
 	.pull-two-fifths { position: relative; right: 40%; }
 	.pull-three-fifths { position: relative; right: 60%; }
 	.pull-four-fifths { position: relative; right: 80%; }
-	.push-one-sixth { position: relative; left: 16.66667%; }
-	.push-five-sixths { position: relative; left: 83.33333%; }
+	.pull-one-sixth { position: relative; left: 16.66667%; }
+	.pull-five-sixths { position: relative; left: 83.33333%; }
 
 	&:after {
 		content: "";
