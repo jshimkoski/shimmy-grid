@@ -13,7 +13,7 @@ Features:
 * Easy response width size adjustment (default is < 768px).
 * Lightweight
 * Cross browser support (IE7+, Chrome, Firefox, Safari) (compatibility still in early testing)
-* Easy to use grid markup:
+* Easy to use (and remember) markup:
 
 <pre><code>
 	&lt;div class="grid"&gt;
