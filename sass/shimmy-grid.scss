@@ -1,0 +1,84 @@
+@import "compass/reset";
+
+$width: 960px;
+$mobile-max: 768px;
+$float: left;
+$direction: ltr;
+
+%grid {
+	*zoom: 1;
+	max-width: $width;
+	_width: $width;
+	padding: 0;
+	margin: 0 auto;
+}
+
+%column {
+	float: $float;
+	direction: $direction;
+	margin-right: 0;
+	display: inline;
+}
+
+@mixin react() {
+	&.react {
+		@media screen and (max-width: $mobile-max) {
+			.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .two-fourths, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths { width: 100%; }
+		}
+	}
+}
+
+.grid, .g {
+	@extend %grid;
+
+	@include react();
+
+	.row, .r { clear: both; @include react(); }
+
+	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .two-fourths, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths { @extend %column; }
+
+	.one-whole { width: 100%; }
+	.one-half, .two-fourths, .three-sixths { width: 50%; }
+	.one-third, .two-sixths { width: 33.33333%; }
+	.two-thirds, .four-sixths { width: 66.66667%; }
+	.one-fourth { width: 25%; }
+	.three-fourths { width: 75%; }
+	.one-fifth { width: 20%; }
+	.two-fifths { width: 40%; }
+	.three-fifths { width: 60%; }
+	.four-fifths { width: 80%; }
+	.one-sixth { width: 16.66667%; }
+	.five-sixths { width: 83.33333%; }
+
+	.push-one-whole { position: relative; left: 100%; }
+	.push-one-half, .push-two-fourths, .push-three-sixths { position: relative; left: 50%; }
+	.push-one-third, .push-two-sixths { position: relative; left: 33.33333%; }
+	.push-two-thirds, .push-four-sixths { position: relative; left: 66.66667%; }
+	.push-one-fourth { position: relative; left: 25%; }
+	.push-three-fourths { position: relative; left: 75%; }
+	.push-one-fifth { position: relative; left: 20%; }
+	.push-two-fifths { position: relative; left: 40%; }
+	.push-three-fifths { position: relative; left: 60%; }
+	.push-four-fifths { position: relative; left: 80%; }
+	.push-one-sixth { position: relative; left: 16.66667%; }
+	.push-five-sixths { position: relative; left: 83.33333%; }
+
+	.pull-one-whole { position: relative; right: 100%; }
+	.pull-one-half, .pull-two-fourths, .pull-three-sixths { position: relative; right: 50%; }
+	.pull-one-third, .pull-two-sixths { position: relative; right: 33.33333%; }
+	.pull-two-thirds, .pull-four-sixths { position: relative; right: 66.66667%; }
+	.pull-one-fourth { position: relative; right: 25%; }
+	.pull-three-fourths { position: relative; right: 75%; }
+	.pull-one-fifth { position: relative; right: 20%; }
+	.pull-two-fifths { position: relative; right: 40%; }
+	.pull-three-fifths { position: relative; right: 60%; }
+	.pull-four-fifths { position: relative; right: 80%; }
+	.push-one-sixth { position: relative; left: 16.66667%; }
+	.push-five-sixths { position: relative; left: 83.33333%; }
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

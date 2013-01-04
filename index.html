@@ -2,24 +2,8 @@
 <html lang="en">
 <head>
 	<title>shimmy-grid</title>
-	<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
-	<!--[if IE]>
-		<link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<![endif]-->
-
-	<style>
-		body {
-			font-size: 14px;
-			font-family: Arial, Helvetica, sans-serif;
-			line-height: 28px;
-		}
-
-		p {
-			padding: 10px;
-			border: 1px solid red;
-		}
-	</style>
+	<link href="stylesheets/shimmy-grid.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/demo.css" media="screen, projection" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -64,26 +48,26 @@
 			<div class="three-sixths"><p>three sixths</p></div>
 		</div>
 	</div>
-	
+
 	<div class="grid">
 		<h1>Nested Grids</h1>
 		<div class="row react">
 			<div class="one-fifth"><p>one fifth</p></div>
 			<div class="four-fifths">
 				<div class="row">
-					<div class="one-third"><p style="background:#EEF;">nested one third</p></div>
-					<div class="two-thirds"><p style="background:#EEF;">nested two thirds</p></div>
+					<div class="one-third nested"><p>nested one third</p></div>
+					<div class="two-thirds nested"><p>nested two thirds</p></div>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="three-fourths">
 				<div class="row react">
-					<div class="one-third"><p style="background:#EEF;">nested one third</p></div>
+					<div class="one-third"><p>nested one third</p></div>
 					<div class="two-thirds">
 						<div class="row">
-							<div class="one-half"><p style="background:#FEE;">nested x2 one half</p></div>
-							<div class="one-half"><p style="background:#FEE;">nested x2 one half</p></div>
+							<div class="one-half nested2"><p>nested x2 one half</p></div>
+							<div class="one-half nested2"><p>nested x2 one half</p></div>
 						</div>
 					</div>
 				</div>
@@ -91,19 +75,19 @@
 			<div class="one-fourth"><p>one fourth</p></div>
 		</div>
 	</div>
-	
-	<div class="grid react">
+
+	<div class="g react">
 		<h1>Push/Pull</h1>
-		<div class="row">
+		<div class="r">
 			<div class="one-half pull-one-fifth"><p>one half pull one fifth</p></div>
 			<div class="one-half push-one-sixth"><p>one half push one sixth</p></div>
 		</div>
-		<div class="row">
+		<div class="r">
 			<div class="one-fifth"><p>one fifth</p></div>
 			<div class="four-fifths">
-				<div class="row">
-					<div class="one-third push-one-sixth" style="background:#0FF; opacity:0.8"><p>nested one third push one sixth</p></div>
-					<div class="two-thirds"><p style="background:#EEF;">nested two thirds</p></div>
+				<div class="r">
+					<div class="one-third push-one-sixth nested"><p>nested one third push one sixth</p></div>
+					<div class="two-thirds nested"><p>nested two thirds</p></div>
 				</div>
 			</div>
 		</div>
