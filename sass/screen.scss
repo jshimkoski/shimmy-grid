@@ -36,7 +36,29 @@ $direction: ltr;
 	.two-fifths { width: 40%; }
 	.three-fifths { width: 60%; }
 	.four-fifths { width: 80%; }
-	
+
+	.push-one-whole { position: relative; left: 100%; }
+	.push-one-half { position: relative; left: 50%; }
+	.push-one-third { position: relative; left: 33.33333%; }
+	.push-two-thirds { position: relative; left: 66.66667%; }
+	.push-one-fourth { position: relative; left: 25%; }
+	.push-three-fourths { position: relative; left: 75%; }
+	.push-one-fifth { position: relative; left: 20%; }
+	.push-two-fifths { position: relative; left: 40%; }
+	.push-three-fifths { position: relative; left: 60%; }
+	.push-four-fifths { position: relative; left: 80%; }
+
+	.pull-one-whole { position: relative; right: 100%; }
+	.pull-one-half { position: relative; right: 50%; }
+	.pull-one-third { position: relative; right: 33.33333%; }
+	.pull-two-thirds { position: relative; right: 66.66667%; }
+	.pull-one-fourth { position: relative; right: 25%; }
+	.pull-three-fourths { position: relative; right: 75%; }
+	.pull-one-fifth { position: relative; right: 20%; }
+	.pull-two-fifths { position: relative; right: 40%; }
+	.pull-three-fifths { position: relative; right: 60%; }
+	.pull-four-fifths { position: relative; right: 80%; }
+
 	&:after {
 		content: "";
 		display: table;
