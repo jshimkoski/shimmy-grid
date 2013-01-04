@@ -1,14 +1,15 @@
 shimmy-grid
 ===========
 
-Sass/Compass CSS grid layout with some brains
+Sass/Compass CSS grid layout with all brains and no fluff.
 
 Features:
 
 * Easy master grid width adjustment (default is 960px).
 * Easy right to left (rtl) alignment (grid and text) (defaults to left (ltr) alignment).
-* Infinite grid nesting.
+* Infinite intelligent grid nesting.
 * Push/Pull capabilities.
+* Lightweight
 * Easy to use grid markup:
 
 <pre><code>
