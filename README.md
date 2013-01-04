@@ -8,7 +8,7 @@ Features:
 * Easy master grid width adjustment (default is 960px).
 * Easy right to left (rtl) alignment (grid and text) (defaults to left (ltr) alignment).
 * Infinite intelligent grid nesting.
-* Push/Pull capabilities.
+* Push/pull capabilities with nesting.
 * Lightweight
 * Easy to use grid markup:
 
