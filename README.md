@@ -8,7 +8,7 @@ Features:
 * Easy master grid width adjustment (default is 960px).
 * Easy right to left (rtl) alignment (grid and text) (defaults to left (ltr) alignment).
 * Infinite intelligent grid nesting.
-* Push/pull capabilities with nesting.
+* Push/pull capabilities (even with nesting).
 * Can turn on responsive design at parent grid or row level by adding a .react class.
 * Lightweight
 * Cross browser support (IE7+, Chrome, Firefox, Safari) (compatibility still in early testing)
