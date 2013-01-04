@@ -25,7 +25,7 @@ $direction: ltr;
 	.row { clear: both; }
 	
 	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths { @extend %column; }
-	
+
 	.one-whole { width: 100%; }
 	.one-half { width: 50%; }
 	.one-third { width: 33.33333%; }
@@ -64,17 +64,4 @@ $direction: ltr;
 		display: table;
 		clear: both;
 	}
-}
-
-// for demo
-
-body {
-	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 28px;
-}
-
-p {
-	padding: 10px;
-	border: 1px solid red;
 }
