@@ -6,9 +6,9 @@ body {
 }
 
 /* line 7, ../sass/demo.scss */
-p {
-  padding: 10px;
+div.gutter {
   border: 1px solid red;
+  padding: 10px;
 }
 
 /* line 12, ../sass/demo.scss */

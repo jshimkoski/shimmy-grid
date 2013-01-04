@@ -12,7 +12,7 @@ Features:
 * Can turn on responsive design at parent grid level or row level (even nested rows) by adding a .react class.
 * Easy response width size adjustment (default is < 768px).
 * Lightweight
-* Cross browser support (IE7+, Chrome, Firefox, Safari) (compatibility still in early testing)
+* Cross browser support (IE6+, Chrome, Firefox, Safari) (compatibility still in early testing)
 * Easy to use (and remember) markup:
 
 <pre><code>
@@ -48,5 +48,7 @@ Features:
 
 * .grid class can be shortened to .g
 * .row class can be shortened to .r
+
+* Gutters are not used in shimmy-grid. This grid is purely structural and not for presentation. Use a .gutter class for parent elements inside columns to handle this (as done in the demo page).
 
 This is a work in progress. Thanks for checking it out.

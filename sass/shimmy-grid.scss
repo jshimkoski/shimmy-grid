@@ -32,7 +32,10 @@ $direction: ltr;
 
 	@include react();
 
-	.row, .r { clear: both; @include react(); }
+	.row, .r {
+		clear: both;
+		@include react();
+	}
 
 	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .two-fourths, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths { @extend %column; }
 

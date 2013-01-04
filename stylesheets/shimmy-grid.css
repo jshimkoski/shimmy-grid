@@ -95,175 +95,175 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     width: 100%;
   }
 }
-/* line 39, ../sass/shimmy-grid.scss */
+/* line 42, ../sass/shimmy-grid.scss */
 .grid .one-whole, .g .one-whole {
   width: 100%;
 }
-/* line 40, ../sass/shimmy-grid.scss */
+/* line 43, ../sass/shimmy-grid.scss */
 .grid .one-half, .grid .two-fourths, .grid .three-sixths, .g .one-half, .g .two-fourths, .g .three-sixths {
   width: 50%;
 }
-/* line 41, ../sass/shimmy-grid.scss */
+/* line 44, ../sass/shimmy-grid.scss */
 .grid .one-third, .grid .two-sixths, .g .one-third, .g .two-sixths {
   width: 33.33333%;
 }
-/* line 42, ../sass/shimmy-grid.scss */
+/* line 45, ../sass/shimmy-grid.scss */
 .grid .two-thirds, .grid .four-sixths, .g .two-thirds, .g .four-sixths {
   width: 66.66667%;
 }
-/* line 43, ../sass/shimmy-grid.scss */
+/* line 46, ../sass/shimmy-grid.scss */
 .grid .one-fourth, .g .one-fourth {
   width: 25%;
 }
-/* line 44, ../sass/shimmy-grid.scss */
+/* line 47, ../sass/shimmy-grid.scss */
 .grid .three-fourths, .g .three-fourths {
   width: 75%;
 }
-/* line 45, ../sass/shimmy-grid.scss */
+/* line 48, ../sass/shimmy-grid.scss */
 .grid .one-fifth, .g .one-fifth {
   width: 20%;
 }
-/* line 46, ../sass/shimmy-grid.scss */
+/* line 49, ../sass/shimmy-grid.scss */
 .grid .two-fifths, .g .two-fifths {
   width: 40%;
 }
-/* line 47, ../sass/shimmy-grid.scss */
+/* line 50, ../sass/shimmy-grid.scss */
 .grid .three-fifths, .g .three-fifths {
   width: 60%;
 }
-/* line 48, ../sass/shimmy-grid.scss */
+/* line 51, ../sass/shimmy-grid.scss */
 .grid .four-fifths, .g .four-fifths {
   width: 80%;
 }
-/* line 49, ../sass/shimmy-grid.scss */
+/* line 52, ../sass/shimmy-grid.scss */
 .grid .one-sixth, .g .one-sixth {
   width: 16.66667%;
 }
-/* line 50, ../sass/shimmy-grid.scss */
+/* line 53, ../sass/shimmy-grid.scss */
 .grid .five-sixths, .g .five-sixths {
   width: 83.33333%;
 }
-/* line 52, ../sass/shimmy-grid.scss */
+/* line 55, ../sass/shimmy-grid.scss */
 .grid .push-one-whole, .g .push-one-whole {
   position: relative;
   left: 100%;
 }
-/* line 53, ../sass/shimmy-grid.scss */
+/* line 56, ../sass/shimmy-grid.scss */
 .grid .push-one-half, .grid .push-two-fourths, .grid .push-three-sixths, .g .push-one-half, .g .push-two-fourths, .g .push-three-sixths {
   position: relative;
   left: 50%;
 }
-/* line 54, ../sass/shimmy-grid.scss */
+/* line 57, ../sass/shimmy-grid.scss */
 .grid .push-one-third, .grid .push-two-sixths, .g .push-one-third, .g .push-two-sixths {
   position: relative;
   left: 33.33333%;
 }
-/* line 55, ../sass/shimmy-grid.scss */
+/* line 58, ../sass/shimmy-grid.scss */
 .grid .push-two-thirds, .grid .push-four-sixths, .g .push-two-thirds, .g .push-four-sixths {
   position: relative;
   left: 66.66667%;
 }
-/* line 56, ../sass/shimmy-grid.scss */
+/* line 59, ../sass/shimmy-grid.scss */
 .grid .push-one-fourth, .g .push-one-fourth {
   position: relative;
   left: 25%;
 }
-/* line 57, ../sass/shimmy-grid.scss */
+/* line 60, ../sass/shimmy-grid.scss */
 .grid .push-three-fourths, .g .push-three-fourths {
   position: relative;
   left: 75%;
 }
-/* line 58, ../sass/shimmy-grid.scss */
+/* line 61, ../sass/shimmy-grid.scss */
 .grid .push-one-fifth, .g .push-one-fifth {
   position: relative;
   left: 20%;
 }
-/* line 59, ../sass/shimmy-grid.scss */
+/* line 62, ../sass/shimmy-grid.scss */
 .grid .push-two-fifths, .g .push-two-fifths {
   position: relative;
   left: 40%;
 }
-/* line 60, ../sass/shimmy-grid.scss */
+/* line 63, ../sass/shimmy-grid.scss */
 .grid .push-three-fifths, .g .push-three-fifths {
   position: relative;
   left: 60%;
 }
-/* line 61, ../sass/shimmy-grid.scss */
+/* line 64, ../sass/shimmy-grid.scss */
 .grid .push-four-fifths, .g .push-four-fifths {
   position: relative;
   left: 80%;
 }
-/* line 62, ../sass/shimmy-grid.scss */
+/* line 65, ../sass/shimmy-grid.scss */
 .grid .push-one-sixth, .g .push-one-sixth {
   position: relative;
   left: 16.66667%;
 }
-/* line 63, ../sass/shimmy-grid.scss */
+/* line 66, ../sass/shimmy-grid.scss */
 .grid .push-five-sixths, .g .push-five-sixths {
   position: relative;
   left: 83.33333%;
 }
-/* line 65, ../sass/shimmy-grid.scss */
+/* line 68, ../sass/shimmy-grid.scss */
 .grid .pull-one-whole, .g .pull-one-whole {
   position: relative;
   right: 100%;
 }
-/* line 66, ../sass/shimmy-grid.scss */
+/* line 69, ../sass/shimmy-grid.scss */
 .grid .pull-one-half, .grid .pull-two-fourths, .grid .pull-three-sixths, .g .pull-one-half, .g .pull-two-fourths, .g .pull-three-sixths {
   position: relative;
   right: 50%;
 }
-/* line 67, ../sass/shimmy-grid.scss */
+/* line 70, ../sass/shimmy-grid.scss */
 .grid .pull-one-third, .grid .pull-two-sixths, .g .pull-one-third, .g .pull-two-sixths {
   position: relative;
   right: 33.33333%;
 }
-/* line 68, ../sass/shimmy-grid.scss */
+/* line 71, ../sass/shimmy-grid.scss */
 .grid .pull-two-thirds, .grid .pull-four-sixths, .g .pull-two-thirds, .g .pull-four-sixths {
   position: relative;
   right: 66.66667%;
 }
-/* line 69, ../sass/shimmy-grid.scss */
+/* line 72, ../sass/shimmy-grid.scss */
 .grid .pull-one-fourth, .g .pull-one-fourth {
   position: relative;
   right: 25%;
 }
-/* line 70, ../sass/shimmy-grid.scss */
+/* line 73, ../sass/shimmy-grid.scss */
 .grid .pull-three-fourths, .g .pull-three-fourths {
   position: relative;
   right: 75%;
 }
-/* line 71, ../sass/shimmy-grid.scss */
+/* line 74, ../sass/shimmy-grid.scss */
 .grid .pull-one-fifth, .g .pull-one-fifth {
   position: relative;
   right: 20%;
 }
-/* line 72, ../sass/shimmy-grid.scss */
+/* line 75, ../sass/shimmy-grid.scss */
 .grid .pull-two-fifths, .g .pull-two-fifths {
   position: relative;
   right: 40%;
 }
-/* line 73, ../sass/shimmy-grid.scss */
+/* line 76, ../sass/shimmy-grid.scss */
 .grid .pull-three-fifths, .g .pull-three-fifths {
   position: relative;
   right: 60%;
 }
-/* line 74, ../sass/shimmy-grid.scss */
+/* line 77, ../sass/shimmy-grid.scss */
 .grid .pull-four-fifths, .g .pull-four-fifths {
   position: relative;
   right: 80%;
 }
-/* line 75, ../sass/shimmy-grid.scss */
+/* line 78, ../sass/shimmy-grid.scss */
 .grid .pull-one-sixth, .g .pull-one-sixth {
   position: relative;
   left: 16.66667%;
 }
-/* line 76, ../sass/shimmy-grid.scss */
+/* line 79, ../sass/shimmy-grid.scss */
 .grid .pull-five-sixths, .g .pull-five-sixths {
   position: relative;
   left: 83.33333%;
 }
-/* line 78, ../sass/shimmy-grid.scss */
+/* line 81, ../sass/shimmy-grid.scss */
 .grid:after, .g:after {
   content: "";
   display: table;
