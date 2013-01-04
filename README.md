@@ -27,19 +27,20 @@ Features:
 * Available grid classes:
 	- .one-whole
 	- .one-half
-	- .one-third
-	- .two-thirds
-	- .one-fourth
-	- .three-fourths
-	- .one-fifth
-	- .two-fifths
-	- .three-fifths
-	- .four-fifths
-	- .one-sixth
-	- .five-sixths
+	- .one-third, .two-thirds
+	- .one-fourth, .two-fourths, .three-fourths
+	- .one-fifth, .two-fifths, .three-fifths, .four-fifths
+	- .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths
 
 * Every grid class can be pushed/pulled by prepending push- or pull- for example:
-	- .push-one-fifth
-	- .pull-two-thirds
+
+<pre><code>
+	&lt;div class="container"&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="one-fourth"&gt;&lt;/div&gt;
+			&lt;div class="three-fourths pull-one-sixth"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</code></pre>
 
 This is a work in progress. Thanks for checking it out.
