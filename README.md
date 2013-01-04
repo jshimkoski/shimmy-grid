@@ -10,6 +10,7 @@ Features:
 * Infinite intelligent grid nesting.
 * Push/pull capabilities with nesting.
 * Lightweight
+* Cross browser support (IE7+, Chrome, Firefox, Safari) (compatibility still in early testing)
 * Easy to use grid markup:
 
 <pre><code>
@@ -32,7 +33,7 @@ Features:
 	- .one-fifth, .two-fifths, .three-fifths, .four-fifths
 	- .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths
 
-* Every grid class can be pushed/pulled by prepending push- or pull- for example:
+* Every grid class can be pushed/pulled for example:
 
 <pre><code>
 	&lt;div class="container"&gt;
