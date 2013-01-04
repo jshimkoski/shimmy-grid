@@ -10,6 +10,7 @@ Features:
 * Infinite intelligent grid nesting.
 * Push/pull capabilities (even with nesting).
 * Can turn on responsive design at parent grid level or row level by adding a .react class.
+* Easy response width size adjustment (default is < 768px).
 * Lightweight
 * Cross browser support (IE7+, Chrome, Firefox, Safari) (compatibility still in early testing)
 * Easy to use grid markup:
