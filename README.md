@@ -21,7 +21,7 @@ Features:
 		</div>
 	</div>
 
-Available grid classes:
+* Available grid classes:
 	- .one-whole
 	- .one-half
 	- .one-third
