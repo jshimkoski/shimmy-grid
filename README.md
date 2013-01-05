@@ -12,7 +12,7 @@ Features:
 * Can turn on responsive design at parent grid level or row level (even nested rows) by adding a .react class.
 * Easy response width size adjustment (default is < 768px).
 * Lightweight.
-* Cross browser support (IE6+, Chrome, Firefox, Safari, Opera) (responsive design not compatible with IE 8 and below).
+* Cross browser support (IE 6+, Chrome, Firefox, Safari, Opera) (responsive design not compatible with IE 8 and below).
 * Easy to use (and remember) markup:
 
 <pre><code>
@@ -54,10 +54,10 @@ FAQs:
 
 Q: Will you add gutters to shimmy-grid?
 
-A: shimmy-grid is strictly structural. Use a .gutter class for parent elements inside columns instead (as done in the demo page).
+A: No. shimmy-grid is strictly for structure. Use a .gutter class for parent elements inside columns instead (as done in the demo page).
 
-Q: Why isn't responsive design supported on IE8 and below?
+Q: Why isn't responsive design supported on IE 8 and below?
 
-A: I counter with: Why support browsers that are not available on portable devices?
+A: Because IE sucks and shimmy-grid is css only.
 
 This is a work in progress. Thanks for checking it out.
