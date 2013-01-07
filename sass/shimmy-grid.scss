@@ -1,9 +1,12 @@
-@import "compass/reset";
+@import "base";
 
-$width: 960px;
-$mobile-max: 768px;
-$float: left;
-$direction: ltr;
+$push: push;
+$pull: pull;
+
+@if $grid-float == right {
+    $push: pull;
+    $pull: push;
+}
 
 %grid {
 	*zoom: 1;
@@ -14,27 +17,32 @@ $direction: ltr;
 }
 
 %column {
-	float: $float;
-	direction: $direction;
+	float: $grid-float;
+	direction: $text-direction;
 	display: inline;
 }
 
-@mixin react() {
-	&.react {
-		@media screen and (max-width: $mobile-max) {
+@mixin respond() {
+	&.respond {
+		@media screen and (max-width: $respond-width) {
 			.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .two-fourths, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths { width: 100%; }
-		}
+		
+            $modifier: push- pull-;
+            @each $mod in $modifier {
+                .#{$mod}one-whole, .#{$mod}one-half, .#{$mod}one-third, .#{$mod}two-thirds, .#{$mod}one-fourth, .#{$mod}two-fourths, .#{$mod}three-fourths, .#{$mod}one-fifth, .#{$mod}two-fifths, .#{$mod}three-fifths, .#{$mod}four-fifths, .#{$mod}one-sixth, .#{$mod}two-sixths, .#{$mod}three-sixths, .#{$mod}four-sixths, .#{$mod}five-sixths { position: inherit; left: 0; right: 0; }
+            }
+        }
 	}
 }
 
 .grid, .g {
 	@extend %grid;
 
-	@include react();
+	@include respond();
 
 	.row, .r {
 		clear: both;
-		@include react();
+		@include respond();
 	}
 
 	.one-whole, .one-half, .one-third, .two-thirds, .one-fourth, .two-fourths, .three-fourths, .one-fifth, .two-fifths, .three-fifths, .four-fifths, .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths { @extend %column; }
@@ -52,31 +60,25 @@ $direction: ltr;
 	.one-sixth { width: 16.66667%; }
 	.five-sixths { width: 83.33333%; }
 
-	.push-one-whole { position: relative; left: 100%; }
-	.push-one-half, .push-two-fourths, .push-three-sixths { position: relative; left: 50%; }
-	.push-one-third, .push-two-sixths { position: relative; left: 33.33333%; }
-	.push-two-thirds, .push-four-sixths { position: relative; left: 66.66667%; }
-	.push-one-fourth { position: relative; left: 25%; }
-	.push-three-fourths { position: relative; left: 75%; }
-	.push-one-fifth { position: relative; left: 20%; }
-	.push-two-fifths { position: relative; left: 40%; }
-	.push-three-fifths { position: relative; left: 60%; }
-	.push-four-fifths { position: relative; left: 80%; }
-	.push-one-sixth { position: relative; left: 16.66667%; }
-	.push-five-sixths { position: relative; left: 83.33333%; }
-
-	.pull-one-whole { position: relative; right: 100%; }
-	.pull-one-half, .pull-two-fourths, .pull-three-sixths { position: relative; right: 50%; }
-	.pull-one-third, .pull-two-sixths { position: relative; right: 33.33333%; }
-	.pull-two-thirds, .pull-four-sixths { position: relative; right: 66.66667%; }
-	.pull-one-fourth { position: relative; right: 25%; }
-	.pull-three-fourths { position: relative; right: 75%; }
-	.pull-one-fifth { position: relative; right: 20%; }
-	.pull-two-fifths { position: relative; right: 40%; }
-	.pull-three-fifths { position: relative; right: 60%; }
-	.pull-four-fifths { position: relative; right: 80%; }
-	.pull-one-sixth { position: relative; left: 16.66667%; }
-	.pull-five-sixths { position: relative; left: 83.33333%; }
+    $directions: left right;
+    @each $d in $directions {
+        $modifier: $push;
+        @if $d == right {
+            $modifier: $pull;
+        }
+        .#{$modifier}-one-whole { position: relative; #{$d}: 100%; }
+        .#{$modifier}-one-half, .push-two-fourths, .push-three-sixths { position: relative; #{$d}: 50%; }
+        .#{$modifier}-one-third, .push-two-sixths { position: relative; #{$d}: 33.33333%; }
+        .#{$modifier}-two-thirds, .push-four-sixths { position: relative; #{$d}: 66.66667%; }
+        .#{$modifier}-one-fourth { position: relative; #{$d}: 25%; }
+        .#{$modifier}-three-fourths { position: relative; #{$d}: 75%; }
+        .#{$modifier}-one-fifth { position: relative; #{$d}: 20%; }
+        .#{$modifier}-two-fifths { position: relative; #{$d}: 40%; }
+        .#{$modifier}-three-fifths { position: relative; #{$d}: 60%; }
+        .#{$modifier}-four-fifths { position: relative; #{$d}: 80%; }
+        .#{$modifier}-one-sixth { position: relative; #{$d}: 16.66667%; }
+        .#{$modifier}-five-sixths { position: relative; #{$d}: 83.33333%; }
+    }
 
 	&:after {
 		content: "";
