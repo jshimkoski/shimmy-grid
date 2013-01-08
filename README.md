@@ -41,14 +41,14 @@ Features:
 
 * Every column class can be pushed/pulled for example:
 
-<pre><code>
+```
 <div class="g">
 	<div class="r">
 		<div class="one-fourth"></div>
 		<div class="three-fourths pull-one-sixth"></div>
 	</div>
 </div>
-</code></pre>
+```
 
 FAQs:
 
