@@ -28,16 +28,16 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 ```
 
 * Available grid classes:
-	- .grid (can be shortened to .g)
-	- .row (can be shortened to .r)
+	* .grid (can be shortened to .g)
+	* .row (can be shortened to .r)
 
 * Available column classes:
-	- .one-whole
-	- .one-half
-	- .one-third, .two-thirds
-	- .one-fourth, .two-fourths, .three-fourths
-	- .one-fifth, .two-fifths, .three-fifths, .four-fifths
-	- .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths
+	* .one-whole
+	* .one-half
+	* .one-third, .two-thirds
+	* .one-fourth, .two-fourths, .three-fourths
+	* .one-fifth, .two-fifths, .three-fifths, .four-fifths
+	* .one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths
 
 * Every column class can be pushed/pulled for example:
 
