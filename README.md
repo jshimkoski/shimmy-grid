@@ -12,7 +12,7 @@ Features:
 * Can turn on responsive design at parent grid level or row level (even nested rows) by adding a .respond class.
 * Easy response width size adjustment (default is < 768px).
 * Lightweight.
-* Cross browser support (IE 6+, Chrome, Firefox, Safari, Opera) (responsive design not compatible with IE 8 and below).
+* Cross browser support (IE 7+, Chrome, Firefox, Safari, Opera) (responsive design not compatible with IE 8 and below).
 * Easy to use (and remember) markup:
 
 <pre><code>
