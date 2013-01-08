@@ -15,17 +15,17 @@ Features:
 * Cross browser support (IE 7+, Chrome, Firefox, Safari, Opera) (responsive design not compatible with IE 8 and below).
 * Easy to use (and remember) markup:
 
-<pre><code>
-&lt;div class="grid"&gt;
-	&lt;div class="row"&gt;
-		&lt;div class="one-whole"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class="row"&gt;
-		&lt;div class="one-third"&gt;&lt;/div&gt;
-		&lt;div class="two-thirds"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+```
+<div class="grid">
+	<div class="row">
+		<div class="one-whole"></div>
+	</div>
+	<div class="row">
+		<div class="one-third"></div>
+		<div class="two-thirds"></div>
+	</div>
+</div>
+```
 
 * Available grid classes:
 	- .grid (can be shortened to .g)
@@ -42,12 +42,12 @@ Features:
 * Every column class can be pushed/pulled for example:
 
 <pre><code>
-&lt;div class="g"&gt;
-	&lt;div class="r"&gt;
-		&lt;div class="one-fourth"&gt;&lt;/div&gt;
-		&lt;div class="three-fourths pull-one-sixth"&gt;&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
+<div class="g">
+	<div class="r">
+		<div class="one-fourth"></div>
+		<div class="three-fourths pull-one-sixth"></div>
+	</div>
+</div>
 </code></pre>
 
 FAQs:
