@@ -16,15 +16,15 @@ Features:
 * Easy to use (and remember) markup:
 
 <pre><code>
-	&lt;div class="grid"&gt;
-		&lt;div class="row"&gt;
-			&lt;div class="one-whole"&gt;&lt;/div&gt;
-		&lt;/div&gt;
-		&lt;div class="row"&gt;
-			&lt;div class="one-third"&gt;&lt;/div&gt;
-			&lt;div class="two-thirds"&gt;&lt;/div&gt;
-		&lt;/div&gt;
+&lt;div class="grid"&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="one-whole"&gt;&lt;/div&gt;
 	&lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="one-third"&gt;&lt;/div&gt;
+		&lt;div class="two-thirds"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 
 * Available grid classes:
@@ -42,12 +42,12 @@ Features:
 * Every column class can be pushed/pulled for example:
 
 <pre><code>
-	&lt;div class="g"&gt;
-		&lt;div class="r"&gt;
-			&lt;div class="one-fourth"&gt;&lt;/div&gt;
-			&lt;div class="three-fourths pull-one-sixth"&gt;&lt;/div&gt;
-		&lt;/div&gt;
+&lt;div class="g"&gt;
+	&lt;div class="r"&gt;
+		&lt;div class="one-fourth"&gt;&lt;/div&gt;
+		&lt;div class="three-fourths pull-one-sixth"&gt;&lt;/div&gt;
 	&lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 
 FAQs:
