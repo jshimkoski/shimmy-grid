@@ -1,5 +1,5 @@
-$width: 960px; // default: 960px
-$respond-width: 767px; // default: 767px
+$width: 960px; // default: 960px, can be: any unit (pixels, em, percent, etc.)
+$respond-width: 50em; // default: 767px, can be: any unit except percent
 
 $grid-float: left; // default: left, options: left | right
 $text-direction: ltr; // default: ltr, options: ltr | rtl

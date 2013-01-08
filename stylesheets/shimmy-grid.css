@@ -63,7 +63,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 11, ../sass/shimmy-grid.scss */
+/* line 31, ../sass/shimmy-grid.scss */
 .grid, .g {
   *zoom: 1;
   max-width: 960px;
@@ -71,225 +71,338 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-left: auto;
   margin-right: auto;
 }
+/* line 38, ../sass/shimmy-grid.scss */
+.grid:before, .g:before, .grid:after, .g:after {
+  content: " ";
+  display: table;
+}
+/* line 43, ../sass/shimmy-grid.scss */
+.grid:after, .g:after {
+  clear: both;
+}
+@media screen and (max-width: 50em) {
+  /* line 20, ../sass/shimmy-grid.scss */
+  .respond.grid .one-whole, .respond.g .one-whole,
+  .respond.grid .one-half,
+  .respond.g .one-half,
+  .respond.grid .one-third,
+  .respond.g .one-third, .respond.grid .two-thirds, .respond.g .two-thirds,
+  .respond.grid .one-fourth,
+  .respond.g .one-fourth, .respond.grid .two-fourths, .respond.g .two-fourths, .respond.grid .three-fourths, .respond.g .three-fourths,
+  .respond.grid .one-fifth,
+  .respond.g .one-fifth, .respond.grid .two-fifths, .respond.g .two-fifths, .respond.grid .three-fifths, .respond.g .three-fifths, .respond.grid .four-fifths, .respond.g .four-fifths,
+  .respond.grid .one-sixth,
+  .respond.g .one-sixth, .respond.grid .two-sixths, .respond.g .two-sixths, .respond.grid .three-sixths, .respond.g .three-sixths, .respond.grid .four-sixths, .respond.g .four-sixths, .respond.grid .five-sixths, .respond.g .five-sixths {
+    position: inherit;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  /* line 20, ../sass/shimmy-grid.scss */
+  .respond.grid .push-one-whole, .respond.g .push-one-whole,
+  .respond.grid .push-one-half,
+  .respond.g .push-one-half,
+  .respond.grid .push-one-third,
+  .respond.g .push-one-third, .respond.grid .push-two-thirds, .respond.g .push-two-thirds,
+  .respond.grid .push-one-fourth,
+  .respond.g .push-one-fourth, .respond.grid .push-two-fourths, .respond.g .push-two-fourths, .respond.grid .push-three-fourths, .respond.g .push-three-fourths,
+  .respond.grid .push-one-fifth,
+  .respond.g .push-one-fifth, .respond.grid .push-two-fifths, .respond.g .push-two-fifths, .respond.grid .push-three-fifths, .respond.g .push-three-fifths, .respond.grid .push-four-fifths, .respond.g .push-four-fifths,
+  .respond.grid .push-one-sixth,
+  .respond.g .push-one-sixth, .respond.grid .push-two-sixths, .respond.g .push-two-sixths, .respond.grid .push-three-sixths, .respond.g .push-three-sixths, .respond.grid .push-four-sixths, .respond.g .push-four-sixths, .respond.grid .push-five-sixths, .respond.g .push-five-sixths {
+    position: inherit;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  /* line 20, ../sass/shimmy-grid.scss */
+  .respond.grid .pull-one-whole, .respond.g .pull-one-whole,
+  .respond.grid .pull-one-half,
+  .respond.g .pull-one-half,
+  .respond.grid .pull-one-third,
+  .respond.g .pull-one-third, .respond.grid .pull-two-thirds, .respond.g .pull-two-thirds,
+  .respond.grid .pull-one-fourth,
+  .respond.g .pull-one-fourth, .respond.grid .pull-two-fourths, .respond.g .pull-two-fourths, .respond.grid .pull-three-fourths, .respond.g .pull-three-fourths,
+  .respond.grid .pull-one-fifth,
+  .respond.g .pull-one-fifth, .respond.grid .pull-two-fifths, .respond.g .pull-two-fifths, .respond.grid .pull-three-fifths, .respond.g .pull-three-fifths, .respond.grid .pull-four-fifths, .respond.g .pull-four-fifths,
+  .respond.grid .pull-one-sixth,
+  .respond.g .pull-one-sixth, .respond.grid .pull-two-sixths, .respond.g .pull-two-sixths, .respond.grid .pull-three-sixths, .respond.g .pull-three-sixths, .respond.grid .pull-four-sixths, .respond.g .pull-four-sixths, .respond.grid .pull-five-sixths, .respond.g .pull-five-sixths {
+    position: inherit;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+/* line 49, ../sass/shimmy-grid.scss */
+.grid .row, .g .row, .grid .r, .g .r {
+  clear: both;
+}
+@media screen and (max-width: 50em) {
+  /* line 20, ../sass/shimmy-grid.scss */
+  .grid .row.respond .one-whole, .g .row.respond .one-whole,
+  .grid .row.respond .one-half,
+  .g .row.respond .one-half,
+  .grid .row.respond .one-third,
+  .g .row.respond .one-third, .grid .row.respond .two-thirds, .g .row.respond .two-thirds,
+  .grid .row.respond .one-fourth,
+  .g .row.respond .one-fourth, .grid .row.respond .two-fourths, .g .row.respond .two-fourths, .grid .row.respond .three-fourths, .g .row.respond .three-fourths,
+  .grid .row.respond .one-fifth,
+  .g .row.respond .one-fifth, .grid .row.respond .two-fifths, .g .row.respond .two-fifths, .grid .row.respond .three-fifths, .g .row.respond .three-fifths, .grid .row.respond .four-fifths, .g .row.respond .four-fifths,
+  .grid .row.respond .one-sixth,
+  .g .row.respond .one-sixth, .grid .row.respond .two-sixths, .g .row.respond .two-sixths, .grid .row.respond .three-sixths, .g .row.respond .three-sixths, .grid .row.respond .four-sixths, .g .row.respond .four-sixths, .grid .row.respond .five-sixths, .g .row.respond .five-sixths, .grid .r.respond .one-whole, .g .r.respond .one-whole,
+  .grid .r.respond .one-half,
+  .g .r.respond .one-half,
+  .grid .r.respond .one-third,
+  .g .r.respond .one-third, .grid .r.respond .two-thirds, .g .r.respond .two-thirds,
+  .grid .r.respond .one-fourth,
+  .g .r.respond .one-fourth, .grid .r.respond .two-fourths, .g .r.respond .two-fourths, .grid .r.respond .three-fourths, .g .r.respond .three-fourths,
+  .grid .r.respond .one-fifth,
+  .g .r.respond .one-fifth, .grid .r.respond .two-fifths, .g .r.respond .two-fifths, .grid .r.respond .three-fifths, .g .r.respond .three-fifths, .grid .r.respond .four-fifths, .g .r.respond .four-fifths,
+  .grid .r.respond .one-sixth,
+  .g .r.respond .one-sixth, .grid .r.respond .two-sixths, .g .r.respond .two-sixths, .grid .r.respond .three-sixths, .g .r.respond .three-sixths, .grid .r.respond .four-sixths, .g .r.respond .four-sixths, .grid .r.respond .five-sixths, .g .r.respond .five-sixths {
+    position: inherit;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  /* line 20, ../sass/shimmy-grid.scss */
+  .grid .row.respond .push-one-whole, .g .row.respond .push-one-whole,
+  .grid .row.respond .push-one-half,
+  .g .row.respond .push-one-half,
+  .grid .row.respond .push-one-third,
+  .g .row.respond .push-one-third, .grid .row.respond .push-two-thirds, .g .row.respond .push-two-thirds,
+  .grid .row.respond .push-one-fourth,
+  .g .row.respond .push-one-fourth, .grid .row.respond .push-two-fourths, .g .row.respond .push-two-fourths, .grid .row.respond .push-three-fourths, .g .row.respond .push-three-fourths,
+  .grid .row.respond .push-one-fifth,
+  .g .row.respond .push-one-fifth, .grid .row.respond .push-two-fifths, .g .row.respond .push-two-fifths, .grid .row.respond .push-three-fifths, .g .row.respond .push-three-fifths, .grid .row.respond .push-four-fifths, .g .row.respond .push-four-fifths,
+  .grid .row.respond .push-one-sixth,
+  .g .row.respond .push-one-sixth, .grid .row.respond .push-two-sixths, .g .row.respond .push-two-sixths, .grid .row.respond .push-three-sixths, .g .row.respond .push-three-sixths, .grid .row.respond .push-four-sixths, .g .row.respond .push-four-sixths, .grid .row.respond .push-five-sixths, .g .row.respond .push-five-sixths, .grid .r.respond .push-one-whole, .g .r.respond .push-one-whole,
+  .grid .r.respond .push-one-half,
+  .g .r.respond .push-one-half,
+  .grid .r.respond .push-one-third,
+  .g .r.respond .push-one-third, .grid .r.respond .push-two-thirds, .g .r.respond .push-two-thirds,
+  .grid .r.respond .push-one-fourth,
+  .g .r.respond .push-one-fourth, .grid .r.respond .push-two-fourths, .g .r.respond .push-two-fourths, .grid .r.respond .push-three-fourths, .g .r.respond .push-three-fourths,
+  .grid .r.respond .push-one-fifth,
+  .g .r.respond .push-one-fifth, .grid .r.respond .push-two-fifths, .g .r.respond .push-two-fifths, .grid .r.respond .push-three-fifths, .g .r.respond .push-three-fifths, .grid .r.respond .push-four-fifths, .g .r.respond .push-four-fifths,
+  .grid .r.respond .push-one-sixth,
+  .g .r.respond .push-one-sixth, .grid .r.respond .push-two-sixths, .g .r.respond .push-two-sixths, .grid .r.respond .push-three-sixths, .g .r.respond .push-three-sixths, .grid .r.respond .push-four-sixths, .g .r.respond .push-four-sixths, .grid .r.respond .push-five-sixths, .g .r.respond .push-five-sixths {
+    position: inherit;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  /* line 20, ../sass/shimmy-grid.scss */
+  .grid .row.respond .pull-one-whole, .g .row.respond .pull-one-whole,
+  .grid .row.respond .pull-one-half,
+  .g .row.respond .pull-one-half,
+  .grid .row.respond .pull-one-third,
+  .g .row.respond .pull-one-third, .grid .row.respond .pull-two-thirds, .g .row.respond .pull-two-thirds,
+  .grid .row.respond .pull-one-fourth,
+  .g .row.respond .pull-one-fourth, .grid .row.respond .pull-two-fourths, .g .row.respond .pull-two-fourths, .grid .row.respond .pull-three-fourths, .g .row.respond .pull-three-fourths,
+  .grid .row.respond .pull-one-fifth,
+  .g .row.respond .pull-one-fifth, .grid .row.respond .pull-two-fifths, .g .row.respond .pull-two-fifths, .grid .row.respond .pull-three-fifths, .g .row.respond .pull-three-fifths, .grid .row.respond .pull-four-fifths, .g .row.respond .pull-four-fifths,
+  .grid .row.respond .pull-one-sixth,
+  .g .row.respond .pull-one-sixth, .grid .row.respond .pull-two-sixths, .g .row.respond .pull-two-sixths, .grid .row.respond .pull-three-sixths, .g .row.respond .pull-three-sixths, .grid .row.respond .pull-four-sixths, .g .row.respond .pull-four-sixths, .grid .row.respond .pull-five-sixths, .g .row.respond .pull-five-sixths, .grid .r.respond .pull-one-whole, .g .r.respond .pull-one-whole,
+  .grid .r.respond .pull-one-half,
+  .g .r.respond .pull-one-half,
+  .grid .r.respond .pull-one-third,
+  .g .r.respond .pull-one-third, .grid .r.respond .pull-two-thirds, .g .r.respond .pull-two-thirds,
+  .grid .r.respond .pull-one-fourth,
+  .g .r.respond .pull-one-fourth, .grid .r.respond .pull-two-fourths, .g .r.respond .pull-two-fourths, .grid .r.respond .pull-three-fourths, .g .r.respond .pull-three-fourths,
+  .grid .r.respond .pull-one-fifth,
+  .g .r.respond .pull-one-fifth, .grid .r.respond .pull-two-fifths, .g .r.respond .pull-two-fifths, .grid .r.respond .pull-three-fifths, .g .r.respond .pull-three-fifths, .grid .r.respond .pull-four-fifths, .g .r.respond .pull-four-fifths,
+  .grid .r.respond .pull-one-sixth,
+  .g .r.respond .pull-one-sixth, .grid .r.respond .pull-two-sixths, .g .r.respond .pull-two-sixths, .grid .r.respond .pull-three-sixths, .g .r.respond .pull-three-sixths, .grid .r.respond .pull-four-sixths, .g .r.respond .pull-four-sixths, .grid .r.respond .pull-five-sixths, .g .r.respond .pull-five-sixths {
+    position: inherit;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
 
-/* line 19, ../sass/shimmy-grid.scss */
-.grid .one-whole, .grid .one-half, .grid .one-third, .grid .two-thirds, .grid .one-fourth, .grid .two-fourths, .grid .three-fourths, .grid .one-fifth, .grid .two-fifths, .grid .three-fifths, .grid .four-fifths, .grid .one-sixth, .grid .two-sixths, .grid .three-sixths, .grid .four-sixths, .grid .five-sixths, .g .one-whole, .g .one-half, .g .one-third, .g .two-thirds, .g .one-fourth, .g .two-fourths, .g .three-fourths, .g .one-fifth, .g .two-fifths, .g .three-fifths, .g .four-fifths, .g .one-sixth, .g .two-sixths, .g .three-sixths, .g .four-sixths, .g .five-sixths {
+/* line 55, ../sass/shimmy-grid.scss */
+.grid .one-whole,
+.grid .one-half,
+.grid .one-third, .grid .two-thirds,
+.grid .one-fourth, .grid .two-fourths, .grid .three-fourths,
+.grid .one-fifth, .grid .two-fifths, .grid .three-fifths, .grid .four-fifths,
+.grid .one-sixth, .grid .two-sixths, .grid .three-sixths, .grid .four-sixths, .grid .five-sixths, .g .one-whole,
+.g .one-half,
+.g .one-third, .g .two-thirds,
+.g .one-fourth, .g .two-fourths, .g .three-fourths,
+.g .one-fifth, .g .two-fifths, .g .three-fifths, .g .four-fifths,
+.g .one-sixth, .g .two-sixths, .g .three-sixths, .g .four-sixths, .g .five-sixths {
   float: left;
   direction: ltr;
   display: inline;
 }
 
-@media screen and (max-width: 767px) {
-  /* line 28, ../sass/shimmy-grid.scss */
-  .grid.respond .one-whole, .grid.respond .one-half, .grid.respond .one-third, .grid.respond .two-thirds, .grid.respond .one-fourth, .grid.respond .two-fourths, .grid.respond .three-fourths, .grid.respond .one-fifth, .grid.respond .two-fifths, .grid.respond .three-fifths, .grid.respond .four-fifths, .grid.respond .one-sixth, .grid.respond .two-sixths, .grid.respond .three-sixths, .grid.respond .four-sixths, .grid.respond .five-sixths, .g.respond .one-whole, .g.respond .one-half, .g.respond .one-third, .g.respond .two-thirds, .g.respond .one-fourth, .g.respond .two-fourths, .g.respond .three-fourths, .g.respond .one-fifth, .g.respond .two-fifths, .g.respond .three-fifths, .g.respond .four-fifths, .g.respond .one-sixth, .g.respond .two-sixths, .g.respond .three-sixths, .g.respond .four-sixths, .g.respond .five-sixths {
-    width: 100%;
-  }
-  /* line 32, ../sass/shimmy-grid.scss */
-  .grid.respond .push-one-whole, .grid.respond .push-one-half, .grid.respond .push-one-third, .grid.respond .push-two-thirds, .grid.respond .push-one-fourth, .grid.respond .push-two-fourths, .grid.respond .push-three-fourths, .grid.respond .push-one-fifth, .grid.respond .push-two-fifths, .grid.respond .push-three-fifths, .grid.respond .push-four-fifths, .grid.respond .push-one-sixth, .grid.respond .push-two-sixths, .grid.respond .push-three-sixths, .grid.respond .push-four-sixths, .grid.respond .push-five-sixths, .g.respond .push-one-whole, .g.respond .push-one-half, .g.respond .push-one-third, .g.respond .push-two-thirds, .g.respond .push-one-fourth, .g.respond .push-two-fourths, .g.respond .push-three-fourths, .g.respond .push-one-fifth, .g.respond .push-two-fifths, .g.respond .push-three-fifths, .g.respond .push-four-fifths, .g.respond .push-one-sixth, .g.respond .push-two-sixths, .g.respond .push-three-sixths, .g.respond .push-four-sixths, .g.respond .push-five-sixths {
-    position: inherit;
-    left: 0;
-    right: 0;
-  }
-  /* line 32, ../sass/shimmy-grid.scss */
-  .grid.respond .pull-one-whole, .grid.respond .pull-one-half, .grid.respond .pull-one-third, .grid.respond .pull-two-thirds, .grid.respond .pull-one-fourth, .grid.respond .pull-two-fourths, .grid.respond .pull-three-fourths, .grid.respond .pull-one-fifth, .grid.respond .pull-two-fifths, .grid.respond .pull-three-fifths, .grid.respond .pull-four-fifths, .grid.respond .pull-one-sixth, .grid.respond .pull-two-sixths, .grid.respond .pull-three-sixths, .grid.respond .pull-four-sixths, .grid.respond .pull-five-sixths, .g.respond .pull-one-whole, .g.respond .pull-one-half, .g.respond .pull-one-third, .g.respond .pull-two-thirds, .g.respond .pull-one-fourth, .g.respond .pull-two-fourths, .g.respond .pull-three-fourths, .g.respond .pull-one-fifth, .g.respond .pull-two-fifths, .g.respond .pull-three-fifths, .g.respond .pull-four-fifths, .g.respond .pull-one-sixth, .g.respond .pull-two-sixths, .g.respond .pull-three-sixths, .g.respond .pull-four-sixths, .g.respond .pull-five-sixths {
-    position: inherit;
-    left: 0;
-    right: 0;
-  }
-}
-/* line 43, ../sass/shimmy-grid.scss */
-.grid .row, .grid .r, .g .row, .g .r {
-  clear: both;
-}
-@media screen and (max-width: 767px) {
-  /* line 28, ../sass/shimmy-grid.scss */
-  .grid .row.respond .one-whole, .grid .row.respond .one-half, .grid .row.respond .one-third, .grid .row.respond .two-thirds, .grid .row.respond .one-fourth, .grid .row.respond .two-fourths, .grid .row.respond .three-fourths, .grid .row.respond .one-fifth, .grid .row.respond .two-fifths, .grid .row.respond .three-fifths, .grid .row.respond .four-fifths, .grid .row.respond .one-sixth, .grid .row.respond .two-sixths, .grid .row.respond .three-sixths, .grid .row.respond .four-sixths, .grid .row.respond .five-sixths, .grid .r.respond .one-whole, .grid .r.respond .one-half, .grid .r.respond .one-third, .grid .r.respond .two-thirds, .grid .r.respond .one-fourth, .grid .r.respond .two-fourths, .grid .r.respond .three-fourths, .grid .r.respond .one-fifth, .grid .r.respond .two-fifths, .grid .r.respond .three-fifths, .grid .r.respond .four-fifths, .grid .r.respond .one-sixth, .grid .r.respond .two-sixths, .grid .r.respond .three-sixths, .grid .r.respond .four-sixths, .grid .r.respond .five-sixths, .g .row.respond .one-whole, .g .row.respond .one-half, .g .row.respond .one-third, .g .row.respond .two-thirds, .g .row.respond .one-fourth, .g .row.respond .two-fourths, .g .row.respond .three-fourths, .g .row.respond .one-fifth, .g .row.respond .two-fifths, .g .row.respond .three-fifths, .g .row.respond .four-fifths, .g .row.respond .one-sixth, .g .row.respond .two-sixths, .g .row.respond .three-sixths, .g .row.respond .four-sixths, .g .row.respond .five-sixths, .g .r.respond .one-whole, .g .r.respond .one-half, .g .r.respond .one-third, .g .r.respond .two-thirds, .g .r.respond .one-fourth, .g .r.respond .two-fourths, .g .r.respond .three-fourths, .g .r.respond .one-fifth, .g .r.respond .two-fifths, .g .r.respond .three-fifths, .g .r.respond .four-fifths, .g .r.respond .one-sixth, .g .r.respond .two-sixths, .g .r.respond .three-sixths, .g .r.respond .four-sixths, .g .r.respond .five-sixths {
-    width: 100%;
-  }
-  /* line 32, ../sass/shimmy-grid.scss */
-  .grid .row.respond .push-one-whole, .grid .row.respond .push-one-half, .grid .row.respond .push-one-third, .grid .row.respond .push-two-thirds, .grid .row.respond .push-one-fourth, .grid .row.respond .push-two-fourths, .grid .row.respond .push-three-fourths, .grid .row.respond .push-one-fifth, .grid .row.respond .push-two-fifths, .grid .row.respond .push-three-fifths, .grid .row.respond .push-four-fifths, .grid .row.respond .push-one-sixth, .grid .row.respond .push-two-sixths, .grid .row.respond .push-three-sixths, .grid .row.respond .push-four-sixths, .grid .row.respond .push-five-sixths, .grid .r.respond .push-one-whole, .grid .r.respond .push-one-half, .grid .r.respond .push-one-third, .grid .r.respond .push-two-thirds, .grid .r.respond .push-one-fourth, .grid .r.respond .push-two-fourths, .grid .r.respond .push-three-fourths, .grid .r.respond .push-one-fifth, .grid .r.respond .push-two-fifths, .grid .r.respond .push-three-fifths, .grid .r.respond .push-four-fifths, .grid .r.respond .push-one-sixth, .grid .r.respond .push-two-sixths, .grid .r.respond .push-three-sixths, .grid .r.respond .push-four-sixths, .grid .r.respond .push-five-sixths, .g .row.respond .push-one-whole, .g .row.respond .push-one-half, .g .row.respond .push-one-third, .g .row.respond .push-two-thirds, .g .row.respond .push-one-fourth, .g .row.respond .push-two-fourths, .g .row.respond .push-three-fourths, .g .row.respond .push-one-fifth, .g .row.respond .push-two-fifths, .g .row.respond .push-three-fifths, .g .row.respond .push-four-fifths, .g .row.respond .push-one-sixth, .g .row.respond .push-two-sixths, .g .row.respond .push-three-sixths, .g .row.respond .push-four-sixths, .g .row.respond .push-five-sixths, .g .r.respond .push-one-whole, .g .r.respond .push-one-half, .g .r.respond .push-one-third, .g .r.respond .push-two-thirds, .g .r.respond .push-one-fourth, .g .r.respond .push-two-fourths, .g .r.respond .push-three-fourths, .g .r.respond .push-one-fifth, .g .r.respond .push-two-fifths, .g .r.respond .push-three-fifths, .g .r.respond .push-four-fifths, .g .r.respond .push-one-sixth, .g .r.respond .push-two-sixths, .g .r.respond .push-three-sixths, .g .r.respond .push-four-sixths, .g .r.respond .push-five-sixths {
-    position: inherit;
-    left: 0;
-    right: 0;
-  }
-  /* line 32, ../sass/shimmy-grid.scss */
-  .grid .row.respond .pull-one-whole, .grid .row.respond .pull-one-half, .grid .row.respond .pull-one-third, .grid .row.respond .pull-two-thirds, .grid .row.respond .pull-one-fourth, .grid .row.respond .pull-two-fourths, .grid .row.respond .pull-three-fourths, .grid .row.respond .pull-one-fifth, .grid .row.respond .pull-two-fifths, .grid .row.respond .pull-three-fifths, .grid .row.respond .pull-four-fifths, .grid .row.respond .pull-one-sixth, .grid .row.respond .pull-two-sixths, .grid .row.respond .pull-three-sixths, .grid .row.respond .pull-four-sixths, .grid .row.respond .pull-five-sixths, .grid .r.respond .pull-one-whole, .grid .r.respond .pull-one-half, .grid .r.respond .pull-one-third, .grid .r.respond .pull-two-thirds, .grid .r.respond .pull-one-fourth, .grid .r.respond .pull-two-fourths, .grid .r.respond .pull-three-fourths, .grid .r.respond .pull-one-fifth, .grid .r.respond .pull-two-fifths, .grid .r.respond .pull-three-fifths, .grid .r.respond .pull-four-fifths, .grid .r.respond .pull-one-sixth, .grid .r.respond .pull-two-sixths, .grid .r.respond .pull-three-sixths, .grid .r.respond .pull-four-sixths, .grid .r.respond .pull-five-sixths, .g .row.respond .pull-one-whole, .g .row.respond .pull-one-half, .g .row.respond .pull-one-third, .g .row.respond .pull-two-thirds, .g .row.respond .pull-one-fourth, .g .row.respond .pull-two-fourths, .g .row.respond .pull-three-fourths, .g .row.respond .pull-one-fifth, .g .row.respond .pull-two-fifths, .g .row.respond .pull-three-fifths, .g .row.respond .pull-four-fifths, .g .row.respond .pull-one-sixth, .g .row.respond .pull-two-sixths, .g .row.respond .pull-three-sixths, .g .row.respond .pull-four-sixths, .g .row.respond .pull-five-sixths, .g .r.respond .pull-one-whole, .g .r.respond .pull-one-half, .g .r.respond .pull-one-third, .g .r.respond .pull-two-thirds, .g .r.respond .pull-one-fourth, .g .r.respond .pull-two-fourths, .g .r.respond .pull-three-fourths, .g .r.respond .pull-one-fifth, .g .r.respond .pull-two-fifths, .g .r.respond .pull-three-fifths, .g .r.respond .pull-four-fifths, .g .r.respond .pull-one-sixth, .g .r.respond .pull-two-sixths, .g .r.respond .pull-three-sixths, .g .r.respond .pull-four-sixths, .g .r.respond .pull-five-sixths {
-    position: inherit;
-    left: 0;
-    right: 0;
-  }
-}
-/* line 50, ../sass/shimmy-grid.scss */
+/* line 73, ../sass/shimmy-grid.scss */
 .grid .one-whole, .g .one-whole {
   width: 100%;
 }
-/* line 51, ../sass/shimmy-grid.scss */
+/* line 74, ../sass/shimmy-grid.scss */
 .grid .one-half, .grid .two-fourths, .grid .three-sixths, .g .one-half, .g .two-fourths, .g .three-sixths {
   width: 50%;
 }
-/* line 52, ../sass/shimmy-grid.scss */
+/* line 75, ../sass/shimmy-grid.scss */
 .grid .one-third, .grid .two-sixths, .g .one-third, .g .two-sixths {
   width: 33.33333%;
 }
-/* line 53, ../sass/shimmy-grid.scss */
+/* line 76, ../sass/shimmy-grid.scss */
 .grid .two-thirds, .grid .four-sixths, .g .two-thirds, .g .four-sixths {
   width: 66.66667%;
 }
-/* line 54, ../sass/shimmy-grid.scss */
+/* line 77, ../sass/shimmy-grid.scss */
 .grid .one-fourth, .g .one-fourth {
   width: 25%;
 }
-/* line 55, ../sass/shimmy-grid.scss */
+/* line 78, ../sass/shimmy-grid.scss */
 .grid .three-fourths, .g .three-fourths {
   width: 75%;
 }
-/* line 56, ../sass/shimmy-grid.scss */
+/* line 79, ../sass/shimmy-grid.scss */
 .grid .one-fifth, .g .one-fifth {
   width: 20%;
 }
-/* line 57, ../sass/shimmy-grid.scss */
+/* line 80, ../sass/shimmy-grid.scss */
 .grid .two-fifths, .g .two-fifths {
   width: 40%;
 }
-/* line 58, ../sass/shimmy-grid.scss */
+/* line 81, ../sass/shimmy-grid.scss */
 .grid .three-fifths, .g .three-fifths {
   width: 60%;
 }
-/* line 59, ../sass/shimmy-grid.scss */
+/* line 82, ../sass/shimmy-grid.scss */
 .grid .four-fifths, .g .four-fifths {
   width: 80%;
 }
-/* line 60, ../sass/shimmy-grid.scss */
+/* line 83, ../sass/shimmy-grid.scss */
 .grid .one-sixth, .g .one-sixth {
   width: 16.66667%;
 }
-/* line 61, ../sass/shimmy-grid.scss */
+/* line 84, ../sass/shimmy-grid.scss */
 .grid .five-sixths, .g .five-sixths {
   width: 83.33333%;
 }
-/* line 69, ../sass/shimmy-grid.scss */
+/* line 91, ../sass/shimmy-grid.scss */
 .grid .push-one-whole, .g .push-one-whole {
   position: relative;
   left: 100%;
 }
-/* line 70, ../sass/shimmy-grid.scss */
+/* line 92, ../sass/shimmy-grid.scss */
 .grid .push-one-half, .grid .push-two-fourths, .grid .push-three-sixths, .g .push-one-half, .g .push-two-fourths, .g .push-three-sixths {
   position: relative;
   left: 50%;
 }
-/* line 71, ../sass/shimmy-grid.scss */
+/* line 93, ../sass/shimmy-grid.scss */
 .grid .push-one-third, .grid .push-two-sixths, .g .push-one-third, .g .push-two-sixths {
   position: relative;
   left: 33.33333%;
 }
-/* line 72, ../sass/shimmy-grid.scss */
+/* line 94, ../sass/shimmy-grid.scss */
 .grid .push-two-thirds, .grid .push-four-sixths, .g .push-two-thirds, .g .push-four-sixths {
   position: relative;
   left: 66.66667%;
 }
-/* line 73, ../sass/shimmy-grid.scss */
+/* line 95, ../sass/shimmy-grid.scss */
 .grid .push-one-fourth, .g .push-one-fourth {
   position: relative;
   left: 25%;
 }
-/* line 74, ../sass/shimmy-grid.scss */
+/* line 96, ../sass/shimmy-grid.scss */
 .grid .push-three-fourths, .g .push-three-fourths {
   position: relative;
   left: 75%;
 }
-/* line 75, ../sass/shimmy-grid.scss */
+/* line 97, ../sass/shimmy-grid.scss */
 .grid .push-one-fifth, .g .push-one-fifth {
   position: relative;
   left: 20%;
 }
-/* line 76, ../sass/shimmy-grid.scss */
+/* line 98, ../sass/shimmy-grid.scss */
 .grid .push-two-fifths, .g .push-two-fifths {
   position: relative;
   left: 40%;
 }
-/* line 77, ../sass/shimmy-grid.scss */
+/* line 99, ../sass/shimmy-grid.scss */
 .grid .push-three-fifths, .g .push-three-fifths {
   position: relative;
   left: 60%;
 }
-/* line 78, ../sass/shimmy-grid.scss */
+/* line 100, ../sass/shimmy-grid.scss */
 .grid .push-four-fifths, .g .push-four-fifths {
   position: relative;
   left: 80%;
 }
-/* line 79, ../sass/shimmy-grid.scss */
+/* line 101, ../sass/shimmy-grid.scss */
 .grid .push-one-sixth, .g .push-one-sixth {
   position: relative;
   left: 16.66667%;
 }
-/* line 80, ../sass/shimmy-grid.scss */
+/* line 102, ../sass/shimmy-grid.scss */
 .grid .push-five-sixths, .g .push-five-sixths {
   position: relative;
   left: 83.33333%;
 }
-/* line 69, ../sass/shimmy-grid.scss */
+/* line 91, ../sass/shimmy-grid.scss */
 .grid .pull-one-whole, .g .pull-one-whole {
   position: relative;
   right: 100%;
 }
-/* line 70, ../sass/shimmy-grid.scss */
+/* line 92, ../sass/shimmy-grid.scss */
 .grid .pull-one-half, .grid .push-two-fourths, .grid .push-three-sixths, .g .pull-one-half, .g .push-two-fourths, .g .push-three-sixths {
   position: relative;
   right: 50%;
 }
-/* line 71, ../sass/shimmy-grid.scss */
+/* line 93, ../sass/shimmy-grid.scss */
 .grid .pull-one-third, .grid .push-two-sixths, .g .pull-one-third, .g .push-two-sixths {
   position: relative;
   right: 33.33333%;
 }
-/* line 72, ../sass/shimmy-grid.scss */
+/* line 94, ../sass/shimmy-grid.scss */
 .grid .pull-two-thirds, .grid .push-four-sixths, .g .pull-two-thirds, .g .push-four-sixths {
   position: relative;
   right: 66.66667%;
 }
-/* line 73, ../sass/shimmy-grid.scss */
+/* line 95, ../sass/shimmy-grid.scss */
 .grid .pull-one-fourth, .g .pull-one-fourth {
   position: relative;
   right: 25%;
 }
-/* line 74, ../sass/shimmy-grid.scss */
+/* line 96, ../sass/shimmy-grid.scss */
 .grid .pull-three-fourths, .g .pull-three-fourths {
   position: relative;
   right: 75%;
 }
-/* line 75, ../sass/shimmy-grid.scss */
+/* line 97, ../sass/shimmy-grid.scss */
 .grid .pull-one-fifth, .g .pull-one-fifth {
   position: relative;
   right: 20%;
 }
-/* line 76, ../sass/shimmy-grid.scss */
+/* line 98, ../sass/shimmy-grid.scss */
 .grid .pull-two-fifths, .g .pull-two-fifths {
   position: relative;
   right: 40%;
 }
-/* line 77, ../sass/shimmy-grid.scss */
+/* line 99, ../sass/shimmy-grid.scss */
 .grid .pull-three-fifths, .g .pull-three-fifths {
   position: relative;
   right: 60%;
 }
-/* line 78, ../sass/shimmy-grid.scss */
+/* line 100, ../sass/shimmy-grid.scss */
 .grid .pull-four-fifths, .g .pull-four-fifths {
   position: relative;
   right: 80%;
 }
-/* line 79, ../sass/shimmy-grid.scss */
+/* line 101, ../sass/shimmy-grid.scss */
 .grid .pull-one-sixth, .g .pull-one-sixth {
   position: relative;
   right: 16.66667%;
 }
-/* line 80, ../sass/shimmy-grid.scss */
+/* line 102, ../sass/shimmy-grid.scss */
 .grid .pull-five-sixths, .g .pull-five-sixths {
   position: relative;
   right: 83.33333%;
-}
-/* line 83, ../sass/shimmy-grid.scss */
-.grid:after, .g:after {
-  content: "";
-  display: table;
-  clear: both;
 }
