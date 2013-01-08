@@ -3,7 +3,7 @@ shimmy-grid
 
 Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 
-##Features:
+###Features:
 
 * Easy master grid width adjustment (default is 960px).
 * Easy right to left (rtl) alignment (grid and text) (defaults to left (ltr) alignment).
@@ -50,7 +50,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 </div>
 ```
 
-##FAQs:
+###FAQs:
 
 Q: Will you add gutters to shimmy-grid?
 
