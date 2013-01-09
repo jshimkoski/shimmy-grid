@@ -25,11 +25,9 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* Default: 767px
 	* Can be: any unit except percent
 * Available grid classes:
-	* .grid
-	* .g
+	* .grid or .g
 * Available row classes:
-	* .row
-	* .r
+	* .row or .r
 * Available column classes:
 	* .one-whole
 	* .one-half
