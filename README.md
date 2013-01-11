@@ -5,6 +5,8 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 
 ##Features
 
+* Cross browser support: IE 6+, Chrome, Firefox, Safari, Opera
+	* Responsive features not compatible with IE 8 and below
 * Easy master grid width adjustment
 	* Default: 960px
 	* Can be: any unit (pixels, em, percent, etc.)
@@ -23,9 +25,10 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 * Responsive features at grid level or row level
 	* Works with nested rows too!
 	* Just add a .respond class
-* Easy master width adjustment for responsive features
-	* Default: 767px
-	* Can be: any unit except percent
+		* `<div class="grid respond"></div>`
+	* Easily defined for any size (tablet and mobile are the default)
+		* Default: when the browser is < 768px all columns in a .respond grid/row will resize to 50% width
+		* Default: when the browser is < 480px all columns in a .respond grid/row will resize to 100% width
 * Available grid classes:
 	* .grid or .g
 * Available row classes:
@@ -51,10 +54,8 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* .pull-one-fourth, .pull-two-fourths, .pull-three-fourths
 	* .pull-one-fifth, .pull-two-fifths, .pull-three-fifths, .pull-four-fifths
 	* .pull-one-sixth, .pull-two-sixths, .pull-three-sixths, .pull-four-sixths, .pull-five-sixths
-* Lightweight
-* Cross browser support: IE 6+, Chrome, Firefox, Safari, Opera
-	* Responsive features not compatible with IE 8 and below
 * Very easy to use (and remember) markup
+* Lightweight
 
 ##Examples
 
@@ -128,7 +129,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 
 Q: Will you add gutters to shimmy-grid?
 
-A: No. shimmy-grid is strictly structural. Use a .gutter class for parent elements inside columns instead (as done in the demo page).
+A: Possibly. Use a .gutter class for parent elements inside columns for the time being (as done in the demo page).
 
 Q: Why aren't the responsive features supported on IE 8 and below?
 

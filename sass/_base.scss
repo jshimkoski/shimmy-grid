@@ -1,7 +1,19 @@
 $width: 960px; // default: 960px, can be: any unit (pixels, em, percent, etc.)
-$respond-width: 767px; // default: 767px, can be: any unit except percent
+
+/*
+ * $respond-width and $respond-percent work hand in hand to allow responsive
+ * features to work. Think of $respond-width as a list of the max-widths of
+ * @media queries. Think of the $respond-percent list as the cooresponding new
+ * width of the responsive columns.
+ *
+ * default: 
+ * $respond-width: 768px 480px; // must be non-percent unit
+ * $respond-percent: 50% 100%; // must be percent
+*/
+$respond-width: 768px 480px;
+$respond-percent: 50% 100%;
 
 $grid-float: left; // default: left, options: left | right
 $text-direction: ltr; // default: ltr, options: ltr | rtl
 
-@import "compass/reset"; // optional
+@import "compass/reset"; // optional but recommended

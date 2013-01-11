@@ -10,45 +10,35 @@ $pull: pull-;
 
 @mixin respond() {
 	&.respond {
-		@media screen and (max-width: $respond-width) {
-			@each $mod in (null push- pull-) {
-				.#{$mod}one-whole,
-				.#{$mod}one-half,
-				.#{$mod}one-third, .#{$mod}two-thirds,
-				.#{$mod}one-fourth, .#{$mod}two-fourths, .#{$mod}three-fourths,
-				.#{$mod}one-fifth, .#{$mod}two-fifths, .#{$mod}three-fifths, .#{$mod}four-fifths,
-				.#{$mod}one-sixth, .#{$mod}two-sixths, .#{$mod}three-sixths, .#{$mod}four-sixths, .#{$mod}five-sixths {
-					position: inherit;
-					left: 0;
-					right: 0;
-					width: 100%;
+		@for $i from 1 through length($respond-width) {
+			@media screen and (max-width: nth($respond-width, $i)) {
+				@each $mod in (null push- pull-) {
+					.#{$mod}one-half,
+					.#{$mod}one-third, .#{$mod}two-thirds,
+					.#{$mod}one-fourth, .#{$mod}two-fourths, .#{$mod}three-fourths,
+					.#{$mod}one-fifth, .#{$mod}two-fifths, .#{$mod}three-fifths, .#{$mod}four-fifths,
+					.#{$mod}one-sixth, .#{$mod}two-sixths, .#{$mod}three-sixths, .#{$mod}four-sixths, .#{$mod}five-sixths {
+						position: inherit;
+						left: 0;
+						right: 0;
+						width: nth($respond-percent, $i);
+					}
 				}
 			}
 		}
 	}
 }
 
-%grid {
-	*zoom: 1;
-	max-width: $width;
-	_width: $width;
-	margin-left: auto;
-	margin-right: auto;
-
+.clearfix {
+	*zoom:1;
 	&:before, &:after {
-		content: " ";
-		display: table;
+		content: "\0020";
+		display: block;
+		height: 0;
+		overflow: hidden;
 	}
-
 	&:after {
 		clear: both;
-	}
-
-	@include respond();
-
-	.row, .r {
-		clear: both;
-		@include respond();
 	}
 }
 
@@ -59,7 +49,18 @@ $pull: pull-;
 }
 
 .grid, .g {
-	@extend %grid;
+	@extend .clearfix;
+
+	max-width: $width;
+	_width: $width;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include respond();
+
+	.row, .r {
+		@include respond();
+	}
 
 	.one-whole,
 	.one-half,
