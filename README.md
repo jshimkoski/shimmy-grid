@@ -30,14 +30,14 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* Use `.pad` and `.gutter` together
 		* `<div class="grid pad gutter"></div>`
 * Responsive features at grid level or row level
-	* Works with nested rows too!
-	* Works with outside padding and gutters!
-		* `<div class="grid respond pad gutter"></div>`
 	* Just add a `.respond` class
 		* `<div class="grid respond"></div>`
+	* Works with nested rows!
+	* Works with outside padding and gutters!
+		* `<div class="grid respond pad gutter"></div>`
 	* Easily defined for any size (tablet and mobile are the default)
-		* Default: when the browser is < 768px all columns in a .respond grid/row will resize to 50% width
-		* Default: when the browser is < 480px all columns in a .respond grid/row will resize to 100% width
+		* Default: when the browser is < 768px all columns in a `.respond` grid/row will resize to 50% width
+		* Default: when the browser is < 480px all columns in a `.respond` grid/row will resize to 100% width
 * Available grid classes:
 	* `.grid` or `.g`
 * Available row classes:
@@ -48,7 +48,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* `.one-third`, `.two-thirds`
 	* `.one-fourth`, `.two-fourths`, `.three-fourths`
 	* `.one-fifth`, `.two-fifths`, `.three-fifths`, `.four-fifths`
-	* `.one-sixth`, `.two-sixths`, `.three-sixths`, `.four-sixths, `.five-sixths`
+	* `.one-sixth`, `.two-sixths`, `.three-sixths`, `.four-sixths`, `.five-sixths`
 * Available push column classes:
 	* `.push-one-whole`
 	* `.push-one-half`
@@ -66,8 +66,9 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 * Very easy to use (and remember) markup
 * Cross browser support: IE 6+, Chrome, Firefox, Safari, Opera
 	* Responsive features not compatible with IE 8 and below
+		* See FAQs
 	* Outside padding and gutters not compatible with IE 7 and below
-		* Use a .htc fix or equivalent
+		* See FAQs
 * Lightweight
 
 ##Examples
@@ -164,9 +165,9 @@ A: Because IE sucks. Those versions of IE aren't found on mobile devices so I wo
 
 Q: Why doesn't outside padding or gutters work in IE 7 and below?
 
-A: Again, IE sucks. Use a .htc hack or equivalent instead. You could put padding on a parent element of a column to simulate these features.
+A: Again, IE sucks. Put padding on a column's parent element to simulate these features.
 
-Q: Why do I need to add the .respond class to turn on responsive features? Shouldn't this be automatic?
+Q: Why do I need to add the `.respond` class to turn on responsive features? Shouldn't this be automatic?
 
 A: Having the option to activate responsive features at the grid level or at the row level allows for powerful design manipulation.
 
