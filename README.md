@@ -167,9 +167,9 @@ Q: Why doesn't outside padding or gutters work in IE 7 and below?
 
 A: Again, IE sucks. Put padding on a column's parent element to simulate these features.
 
-Q: Why do I need to add the `.respond` class to turn on responsive features? Shouldn't this be automatic?
+Q: Why do I need to add the `.respond` class to turn on responsive features, the `.pad` class for outside grid padding, and `.gutter` for gutters? Shouldn't these options be automatic?
 
-A: Having the option to activate responsive features at the grid level or at the row level allows for powerful design manipulation.
+A: Having the option to activate these features at will allows for very powerful and fine-grained design manipulation.
 
 Q: How is push/pull calculated?
 
