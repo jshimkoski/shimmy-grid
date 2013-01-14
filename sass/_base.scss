@@ -13,7 +13,8 @@ $width: 960px; // default: 960px, can be: any unit (pixels, em, percent, etc.)
 $respond-width: 768px 480px;
 $respond-percent: 50% 100%;
 
+$grid-pad: 20px; // default: 20px, options: any padding parameter
+$gutter: 20px; // default: 20px, options: any non percent unit
+
 $grid-float: left; // default: left, options: left | right
 $text-direction: ltr; // default: ltr, options: ltr | rtl
-
-@import "compass/reset"; // optional but recommended

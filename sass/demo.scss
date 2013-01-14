@@ -27,9 +27,14 @@ h2 {
 	}
 }
 
-div.gutter {
+.grid, .g {
+	&.pad {
+		background: #F00;
+	}
+}
+
+div.module {
 	padding: 10px;
-	margin: 5px;
 	@include border-radius(4px);
 	@include single-box-shadow;
 	background: #eee;

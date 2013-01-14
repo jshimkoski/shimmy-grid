@@ -1,4 +1,6 @@
 @import "base";
+@import "compass/reset";
+@import "compass/css3";
 
 $push: push-;
 $pull: pull-;
@@ -8,37 +10,43 @@ $pull: pull-;
 	$pull: push-;
 }
 
+@function columns() {
+	$columns: ".one-whole, .one-half,
+		.one-third, .two-thirds,
+		.one-fourth, .two-fourths, .three-fourths,
+		.one-fifth, .two-fifths, .three-fifths, .four-fifths,
+		.one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths";
+
+	@return $columns;
+}
+
 @mixin respond() {
 	&.respond {
+		$tmp-cols: "";
+		$add-comma: 1;
+
+		@each $mod in (null push- pull-) {
+			$tmp-cols: $tmp-cols + ".#{$mod}one-half,
+				.#{$mod}one-third, .#{$mod}two-thirds,
+				.#{$mod}one-fourth, .#{$mod}two-fourths, .#{$mod}three-fourths,
+				.#{$mod}one-fifth, .#{$mod}two-fifths, .#{$mod}three-fifths, .#{$mod}four-fifths,
+				.#{$mod}one-sixth, .#{$mod}two-sixths, .#{$mod}three-sixths, .#{$mod}four-sixths, .#{$mod}five-sixths";
+			@if $add-comma != 3 {
+				$tmp-cols: $tmp-cols + ", ";
+			}
+			$add-comma: $add-comma + 1;
+		}
+
 		@for $i from 1 through length($respond-width) {
 			@media screen and (max-width: nth($respond-width, $i)) {
-				@each $mod in (null push- pull-) {
-					.#{$mod}one-half,
-					.#{$mod}one-third, .#{$mod}two-thirds,
-					.#{$mod}one-fourth, .#{$mod}two-fourths, .#{$mod}three-fourths,
-					.#{$mod}one-fifth, .#{$mod}two-fifths, .#{$mod}three-fifths, .#{$mod}four-fifths,
-					.#{$mod}one-sixth, .#{$mod}two-sixths, .#{$mod}three-sixths, .#{$mod}four-sixths, .#{$mod}five-sixths {
-						position: inherit;
-						left: 0;
-						right: 0;
-						width: nth($respond-percent, $i);
-					}
+				#{$tmp-cols} {
+					position: inherit;
+					left: 0;
+					right: 0;
+					width: nth($respond-percent, $i);
 				}
 			}
 		}
-	}
-}
-
-.clearfix {
-	*zoom:1;
-	&:before, &:after {
-		content: "\0020";
-		display: block;
-		height: 0;
-		overflow: hidden;
-	}
-	&:after {
-		clear: both;
 	}
 }
 
@@ -46,6 +54,24 @@ $pull: pull-;
 	float: $grid-float;
 	direction: $text-direction;
 	display: inline;
+}
+
+* {
+	@include box-sizing(border-box);
+}
+
+.clearfix {
+	*zoom:1;
+
+	&:before, &:after {
+		content: "";
+		display: table;
+		height: 0;
+	}
+
+	&:after {
+		clear: both;
+	}
 }
 
 .grid, .g {
@@ -58,16 +84,27 @@ $pull: pull-;
 
 	@include respond();
 
+	&.pad {
+		padding: $grid-pad;
+	}
+
+	&.gutter {
+		.row, .r {
+			margin-left: -$gutter;
+			margin-top: -$gutter;
+		}
+
+		#{columns()} {
+			padding-left: $gutter;
+			padding-top: $gutter;
+		}
+	}
+
 	.row, .r {
 		@include respond();
 	}
 
-	.one-whole,
-	.one-half,
-	.one-third, .two-thirds,
-	.one-fourth, .two-fourths, .three-fourths,
-	.one-fifth, .two-fifths, .three-fifths, .four-fifths,
-	.one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths {
+	#{columns()} {
 		@extend %column;
 	}
 
@@ -86,9 +123,11 @@ $pull: pull-;
 
 	@each $d in (left right) {
 		$mod: $push;
+
 		@if $d == right {
 			$mod: $pull;
 		}
+
 		.#{$mod}one-whole { position: relative; #{$d}: 100%; }
 		.#{$mod}one-half, .push-two-fourths, .push-three-sixths { position: relative; #{$d}: 50%; }
 		.#{$mod}one-third, .push-two-sixths { position: relative; #{$d}: 33.33333%; }
