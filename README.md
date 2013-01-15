@@ -16,7 +16,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* Easy grid text direction adjustment
 		* Default: ltr
 		* Can be: ltr or rtl
-* Infinite row nesting
+* Infinite grid and row nesting
 * Push/pull any column
 	* Columns of nested rows can be pushed/pulled as well!
 	* Just add a push or pull class to a column
