@@ -10,37 +10,27 @@ $pull: pull-;
 	$pull: push-;
 }
 
-@function columns() {
-	$columns: ".one-whole, .one-half,
+@function columns($include-one-whole: true) {
+	$tmp-cols: "";
+
+	@if $include-one-whole == true {
+		$tmp-cols: $tmp-cols + ".one-whole, ";
+	}
+
+	$tmp-cols: $tmp-cols + ".one-half,
 		.one-third, .two-thirds,
 		.one-fourth, .two-fourths, .three-fourths,
 		.one-fifth, .two-fifths, .three-fifths, .four-fifths,
 		.one-sixth, .two-sixths, .three-sixths, .four-sixths, .five-sixths";
 
-	@return $columns;
+	@return $tmp-cols;
 }
 
 @mixin respond() {
 	&.respond {
-		$tmp-cols: "";
-		$add-comma: 1;
-
-		@each $mod in (null push- pull-) {
-			$tmp-cols: $tmp-cols + ".#{$mod}one-half,
-				.#{$mod}one-third, .#{$mod}two-thirds,
-				.#{$mod}one-fourth, .#{$mod}two-fourths, .#{$mod}three-fourths,
-				.#{$mod}one-fifth, .#{$mod}two-fifths, .#{$mod}three-fifths, .#{$mod}four-fifths,
-				.#{$mod}one-sixth, .#{$mod}two-sixths, .#{$mod}three-sixths, .#{$mod}four-sixths, .#{$mod}five-sixths";
-			@if $add-comma != 3 {
-				$tmp-cols: $tmp-cols + ", ";
-			}
-			$add-comma: $add-comma + 1;
-		}
-
 		@for $i from 1 through length($respond-width) {
 			@media screen and (max-width: nth($respond-width, $i)) {
-				#{$tmp-cols} {
-					position: inherit;
+				#{columns(false)} {
 					left: 0;
 					right: 0;
 					width: nth($respond-percent, $i);
@@ -56,11 +46,7 @@ $pull: pull-;
 	display: inline;
 }
 
-* {
-	@include box-sizing(border-box);
-}
-
-.clearfix {
+%clearfix {
 	*zoom:1;
 
 	&:before, &:after {
@@ -74,8 +60,12 @@ $pull: pull-;
 	}
 }
 
+* {
+	@include box-sizing(border-box);
+}
+
 .grid, .g {
-	@extend .clearfix;
+	@extend %clearfix;
 
 	max-width: $width;
 	_width: $width;

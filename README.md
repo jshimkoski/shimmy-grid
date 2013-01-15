@@ -173,7 +173,7 @@ A: Having the option to activate these features at will allows for very powerful
 
 Q: How is push/pull calculated?
 
-A: Pushed/pulled columns are moved left or right based on their closest parent element's width.
+A: Pushed/pulled columns are moved left or right based on their closest parent element's width. Push/pull is disabled when a grid/row is in a responsive state.
 
 ##Additional Info
 
