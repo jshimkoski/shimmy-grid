@@ -78,6 +78,16 @@ $pull: pull-;
 		padding: $grid-pad;
 	}
 
+	&.pad-horizontal, &.pad-h {
+		padding-left: $grid-pad;
+		padding-right: $grid-pad;
+	}
+
+	&.pad-vertical, &.pad-v {
+		padding-top: $grid-pad;
+		padding-bottom: $grid-pad;
+	}
+
 	&.gutter {
 		.row, .r {
 			margin-left: -$gutter;
