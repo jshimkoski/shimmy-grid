@@ -29,12 +29,12 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 		* `<div class="grid gutter"></div>`
 	* Use `.pad` and `.gutter` together
 		* `<div class="grid pad gutter"></div>`
-	* Pad the grid vertically
-		* `<div class="grid pad-vertical"></div>`
-		* `<div class="grid pad-v"></div>`
-	* Pad the grid horizontally
-		* `<div class="grid pad-horizontal"></div>`
-		* `<div class="grid pad-h"></div>`
+	* Pad or gutter the grid vertically
+		* `<div class="grid pad-vertical gutter-vertical"></div>`
+		* `<div class="grid pad-v gutter-v"></div>`
+	* Pad or gutter the grid horizontally
+		* `<div class="grid pad-horizontal gutter-horizontal"></div>`
+		* `<div class="grid pad-h gutter-h"></div>`
 * Responsive features at grid level or row level
 	* Just add a `.respond` class
 		* `<div class="grid respond"></div>`
