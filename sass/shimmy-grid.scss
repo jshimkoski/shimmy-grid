@@ -224,7 +224,7 @@ $pull: pull-;
 	@if $columns > 11 {
 		.one-twelth { width: 8.33333%; }
 		.two-twelths { @extend .one-sixth; }
-		.three-twelths { @extend one-fourth; }
+		.three-twelths { @extend .one-fourth; }
 		.four-twelths { @extend .one-third; }
 		.five-twelths { width: 41.66667%; }
 		.six-twelths { @extend .one-half; }
