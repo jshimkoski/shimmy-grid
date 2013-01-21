@@ -25,7 +25,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* Columns of nested rows can be pushed/pulled as well!
 	* Just add a push or pull class to a column
 		* `<div class="one-third push-one-sixth"></div>`
-* Optional outside padding and gutters
+* Optional outside padding and gutters at grid level
 	* Easy to adjust sizing
 	* Add a `.pad` class for outside padding
 		* `<div class="g pad"></div>`
