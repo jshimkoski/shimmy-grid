@@ -16,5 +16,8 @@ $respond-percent: 50% 100%;
 $grid-pad: 20px; // default: 20px, options: any padding parameter
 $gutter: 20px; // default: 20px, options: any non percent unit
 
+$columns: 6; // total column count, options: 1 - 12
+$enable-push-pull: true; // enable push/pull capabilities, options: true | false
+
 $grid-float: left; // default: left, options: left | right
 $text-direction: ltr; // default: ltr, options: ltr | rtl
