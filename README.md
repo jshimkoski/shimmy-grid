@@ -59,7 +59,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* `.one-sixth`, `.two-sixths`, `.three-sixths`, `.four-sixths`, `.five-sixths`
 	* `.one-seventh`, `.two-sevenths`, `.three-sevenths`, `.four-sevenths`, `.five-sevenths`, `.six-sevenths`
 	* `.one-eighth`, `.two-eighths`, `.three-eighths`, `.four-eighths`, `.five-eighths`, `.six-eighths`, `.seven-eighths`
-	* `.one-ninth, `.two-ninths`, `.three-ninths`, `.four-ninths`, `.five-ninths`, `.six-ninths`, `.seven-ninths`, `.eight-ninths`
+	* `.one-ninth`, `.two-ninths`, `.three-ninths`, `.four-ninths`, `.five-ninths`, `.six-ninths`, `.seven-ninths`, `.eight-ninths`
 	* `.one-tenth`, `.two-tenths`, `.three-tenths`, `.four-tenths`, `.five-tenths`, `.six-tenths`, `.seven-tenths`, `.eight-tenths`, `.nine-tenths`
 	* `.one-eleventh`, `.two-elevenths`, `.three-elevenths`, `.four-elevenths`, `.five-elevenths`, `.six-elevenths`, `.seven-elevenths`, `.eight-elevenths`, `.nine-elevenths`, `.ten-elevenths`
 	* `.one-twelth`, `.two-twelths`, `.three-twelths`, `.four-twelths`, `.five-twelths`, `.six-twelths`, `.seven-twelths`, `.eight-twelths`, `.nine-twelths`, `.ten-twelths`, `.eleven-twelths`
@@ -71,8 +71,8 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* `.push-one-fifth`, `.push-two-fifths`, `.push-three-fifths`, `.push-four-fifths`
 	* `.push-one-sixth`, `.push-two-sixths`, `.push-three-sixths`, `.push-four-sixths, `.push-five-sixths`
 	* `.push-one-seventh`, `.push-two-sevenths`, `.push-three-sevenths`, `.push-four-sevenths`, `.push-five-sevenths`, `.push-six-sevenths`
-	* `.push-one-eighth, `.push-two-eighths`, `.push-three-eighths`, `.push-four-eighths`, `.push-five-eighths`, `.push-six-eighths`, `.push-seven-eighths`
-	* `.push-one-ninth, `.push-two-ninths`, `.push-three-ninths`, `.push-four-ninths`, `.push-five-ninths`, `.push-six-ninths`, `.push-seven-ninths`, `.push-eight-ninths`
+	* `.push-one-eighth`, `.push-two-eighths`, `.push-three-eighths`, `.push-four-eighths`, `.push-five-eighths`, `.push-six-eighths`, `.push-seven-eighths`
+	* `.push-one-ninth`, `.push-two-ninths`, `.push-three-ninths`, `.push-four-ninths`, `.push-five-ninths`, `.push-six-ninths`, `.push-seven-ninths`, `.push-eight-ninths`
 	* `.push-one-tenth`, `.push-two-tenths`, `.push-three-tenths`, `.push-four-tenths`, `.push-five-tenths`, `.push-six-tenths`, `.push-seven-tenths`, `.push-eight-tenths`, `.push-nine-tenths`
 	* `.push-one-eleventh`, `.push-two-elevenths`, `.push-three-elevenths`, `.push-four-elevenths`, `.push-five-elevenths`, `.push-six-elevenths`, `.push-seven-elevenths`, `.push-eight-elevenths`, `.push-nine-elevenths`, `.push-ten-elevenths`
 	* `.push-one-twelth`, `.push-two-twelths`, `.push-three-twelths`, `.push-four-twelths`, `.push-five-twelths`, `.push-six-twelths`, `.push-seven-twelths`, `.push-eight-twelths`, `.push-nine-twelths`, `.push-ten-twelths`, `.push-eleven-twelths`
@@ -84,8 +84,8 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* `.pull-one-fifth`, `.pull-two-fifths`, `.pull-three-fifths`, `.pull-four-fifths`
 	* `.pull-one-sixth`, `.pull-two-sixths`, `.pull-three-sixths`, `.pull-four-sixths`, `.pull-five-sixths`
 	* `.pull-one-seventh`, `.pull-two-sevenths`, `.pull-three-sevenths`, `.pull-four-sevenths`, `.pull-five-sevenths`, `.pull-six-sevenths`
-	* `.pull-one-eighth, `.pull-two-eighths`, `.pull-three-eighths`, `.pull-four-eighths`, `.pull-five-eighths`, `.pull-six-eighths`, `.pull-seven-eighths`
-	* `.pull-one-ninth, `.pull-two-ninths`, `.pull-three-ninths`, `.pull-four-ninths`, `.pull-five-ninths`, `.pull-six-ninths`, `.pull-seven-ninths`, `.pull-eight-ninths`
+	* `.pull-one-eighth`, `.pull-two-eighths`, `.pull-three-eighths`, `.pull-four-eighths`, `.pull-five-eighths`, `.pull-six-eighths`, `.pull-seven-eighths`
+	* `.pull-one-ninth`, `.pull-two-ninths`, `.pull-three-ninths`, `.pull-four-ninths`, `.pull-five-ninths`, `.pull-six-ninths`, `.pull-seven-ninths`, `.pull-eight-ninths`
 	* `.pull-one-tenth`, `.pull-two-tenths`, `.pull-three-tenths`, `.pull-four-tenths`, `.pull-five-tenths`, `.pull-six-tenths`, `.pull-seven-tenths`, `.pull-eight-tenths`, `.pull-nine-tenths`
 	* `.pull-one-eleventh`, `.pull-two-elevenths`, `.pull-three-elevenths`, `.pull-four-elevenths`, `.pull-five-elevenths`, `.pull-six-elevenths`, `.pull-seven-elevenths`, `.pull-eight-elevenths`, `.pull-nine-elevenths`, `.pull-ten-elevenths`
 	* `.pull-one-twelth`, `.pull-two-twelths`, `.pull-three-twelths`, `.pull-four-twelths`, `.pull-five-twelths`, `.pull-six-twelths`, `.pull-seven-twelths`, `.pull-eight-twelths`, `.pull-nine-twelths`, `.pull-ten-twelths`, `.pull-eleven-twelths`
