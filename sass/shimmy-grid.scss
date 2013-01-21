@@ -100,6 +100,26 @@ $pull: pull-;
 		}
 	}
 
+	&.gutter-vertical, &.gutter-v {
+		.row, .r {
+			margin-top: -$gutter;
+		}
+
+		#{columns()} {
+			padding-top: $gutter;
+		}
+	}
+
+	&.gutter-horizontal, &.gutter-h {
+		.row, .r {
+			margin-left: -$gutter;
+		}
+
+		#{columns()} {
+			padding-left: $gutter;
+		}
+	}
+
 	.row, .r {
 		@include respond();
 	}
