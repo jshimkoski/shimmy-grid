@@ -58,7 +58,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* `.one-fifth`, `.two-fifths`, `.three-fifths`, `.four-fifths`
 	* `.one-sixth`, `.two-sixths`, `.three-sixths`, `.four-sixths`, `.five-sixths`
 	* `.one-seventh`, `.two-sevenths`, `.three-sevenths`, `.four-sevenths`, `.five-sevenths`, `.six-sevenths`
-	* `.one-eighth, `.two-eighths`, `.three-eighths`, `.four-eighths`, `.five-eighths`, `.six-eighths`, `.seven-eighths`
+	* `.one-eighth`, `.two-eighths`, `.three-eighths`, `.four-eighths`, `.five-eighths`, `.six-eighths`, `.seven-eighths`
 	* `.one-ninth, `.two-ninths`, `.three-ninths`, `.four-ninths`, `.five-ninths`, `.six-ninths`, `.seven-ninths`, `.eight-ninths`
 	* `.one-tenth`, `.two-tenths`, `.three-tenths`, `.four-tenths`, `.five-tenths`, `.six-tenths`, `.seven-tenths`, `.eight-tenths`, `.nine-tenths`
 	* `.one-eleventh`, `.two-elevenths`, `.three-elevenths`, `.four-elevenths`, `.five-elevenths`, `.six-elevenths`, `.seven-elevenths`, `.eight-elevenths`, `.nine-elevenths`, `.ten-elevenths`
