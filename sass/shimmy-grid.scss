@@ -245,29 +245,29 @@ $pull: pull-;
 
 			.#{$mod}one-whole { position: relative; #{$d}: 100%; }
 
-			@if $columns > 1 {
+			@if $push-pull-columns > 1 {
 				.#{$mod}one-half { position: relative; #{$d}: 50%; }
 			}
 
-			@if $columns > 2 {
+			@if $push-pull-columns > 2 {
 				.#{$mod}one-third { position: relative; #{$d}: 33.33333%; }
 				.#{$mod}two-thirds { position: relative; #{$d}: 66.66667%; }
 			}
 
-			@if $columns > 3 {
+			@if $push-pull-columns > 3 {
 				.#{$mod}one-fourth { position: relative; #{$d}: 25%; }
 				.#{$mod}two-fourths { @extend .#{$mod}one-half; }
 				.#{$mod}three-fourths { position: relative; #{$d}: 75%; }
 			}
 
-			@if $columns > 4 {
+			@if $push-pull-columns > 4 {
 				.#{$mod}one-fifth { position: relative; #{$d}: 20%; }
 				.#{$mod}two-fifths { position: relative; #{$d}: 40%; }
 				.#{$mod}three-fifths { position: relative; #{$d}: 60%; }
 				.#{$mod}four-fifths { position: relative; #{$d}: 80%; }
 			}
 
-			@if $columns > 5 {
+			@if $push-pull-columns > 5 {
 				.#{$mod}one-sixth { position: relative; #{$d}: 16.66667%; }
 				.#{$mod}two-sixths { @extend .#{$mod}one-third; }
 				.#{$mod}three-sixths { @extend .#{$mod}one-half; }
@@ -275,7 +275,7 @@ $pull: pull-;
 				.#{$mod}five-sixths { position: relative; #{$d}: 83.33333%; }
 			}
 
-			@if $columns > 6 {
+			@if $push-pull-columns > 6 {
 				.#{$mod}one-seventh { position: relative; #{$d}: 14.28571%; }
 				.#{$mod}two-sevenths { position: relative; #{$d}: 28.57142%; }
 				.#{$mod}three-sevenths { position: relative; #{$d}: 42.85714%; }
@@ -284,7 +284,7 @@ $pull: pull-;
 				.#{$mod}six-sevenths { position: relative; #{$d}: 85.71429%; }
 			}
 
-			@if $columns > 7 {
+			@if $push-pull-columns > 7 {
 				.#{$mod}one-eighth { position: relative; #{$d}: 12.5%; }
 				.#{$mod}two-eighths { @extend .#{$mod}one-fourth; }
 				.#{$mod}three-eighths { position: relative; #{$d}: 37.5%; }
@@ -294,7 +294,7 @@ $pull: pull-;
 				.#{$mod}seven-eighths { position: relative; #{$d}: 87.5%; }
 			}
 
-			@if $columns > 8 {
+			@if $push-pull-columns > 8 {
 				.#{$mod}one-ninth { position: relative; #{$d}: 11.11111%; }
 				.#{$mod}two-ninths { position: relative; #{$d}: 22.22222%; }
 				.#{$mod}three-ninths { position: relative; #{$d}: 33.33333%; }
@@ -305,7 +305,7 @@ $pull: pull-;
 				.#{$mod}eight-ninths { position: relative; #{$d}: 88.88889%; }
 			}
 
-			@if $columns > 9 {
+			@if $push-pull-columns > 9 {
 				.#{$mod}one-tenth { position: relative; #{$d}: 10%; }
 				.#{$mod}two-tenths { @extend .#{$mod}one-fifth; }
 				.#{$mod}three-tenths { position: relative; #{$d}: 30%; }
@@ -317,7 +317,7 @@ $pull: pull-;
 				.#{$mod}nine-tenths { position: relative; #{$d}: 90%; }
 			}
 
-			@if $columns > 10 {
+			@if $push-pull-columns > 10 {
 				.#{$mod}one-eleventh { position: relative; #{$d}: 9.09091%; }
 				.#{$mod}two-elevenths { position: relative; #{$d}: 18.18182%; }
 				.#{$mod}three-elevenths { position: relative; #{$d}: 27.27273%; }
@@ -330,7 +330,7 @@ $pull: pull-;
 				.#{$mod}ten-elevenths { position: relative; #{$d}: 90.90909%; }
 			}
 
-			@if $columns > 11 {
+			@if $push-pull-columns > 11 {
 				.#{$mod}one-twelth { position: relative; #{$d}: 8.33333%; }
 				.#{$mod}two-twelths { @extend .#{$mod}one-sixth; }
 				.#{$mod}three-twelths { @extend .#{$mod}one-fourth; }
