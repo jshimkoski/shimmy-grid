@@ -22,6 +22,9 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 * Infinite grid and row nesting
 * Push/pull any column
 	* Can be enabled/disabled
+	* Easily adjust total push/pull column count
+		* Default: 6
+		* Can be: from 1 through 12
 	* Columns of nested rows can be pushed/pulled as well!
 	* Just add a push or pull class to a column
 		* `<div class="one-third push-one-sixth"></div>`
