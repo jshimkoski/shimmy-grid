@@ -74,7 +74,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 			* Default: when the browser is < 480px all columns in a `.respond` grid/row will resize to 100% width
 	* Column level
 		* Just prepend a column class with `tablet-` or `phone-` to target those devices
-			* `<div class="one-fourth tablet-one-third phone-one-whole"></div>
+			* `<div class="one-fourth tablet-one-third phone-one-whole"></div>`
 		* Customizable
 * Very easy to use markup
 * Cross browser support: IE 6+, Chrome, Firefox, Safari, Opera
