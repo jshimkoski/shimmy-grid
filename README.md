@@ -77,7 +77,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 			* `<div class="one-fourth tablet-one-third phone-one-whole"></div>`
 		* Customizable
 * Very easy to use markup
-* Cross browser support: IE 6+, Chrome, Firefox, Safari, Opera
+* Cross browser support: IE 7+, Chrome, Firefox, Safari, Opera
 	* Responsive features not compatible with IE 8 and below
 		* See FAQs
 	* Outside padding and gutters not compatible with IE 7 and below
