@@ -7,6 +7,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 
 * Built-in optional CSS reset
 * Highly customizable and lightweight
+	* Change settings in `_base.scss`
 * Easy master grid width adjustment
 	* Default: 960px
 	* Can be: any unit (pixels, em, percent, etc.)
@@ -44,7 +45,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 		* Default: 6
 		* Can be: 0 - 12
 	* Columns of nested rows can be pushed/pulled as well!
-	* Just add a push or pull class to a column
+	* Just prepend `push-` or `pull-` to a column class
 		* `<div class="one-third push-one-sixth"></div>`
 * Optional outside padding and gutters at grid level
 	* Can be enabled/disabled
