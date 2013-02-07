@@ -1,24 +1,40 @@
 $width: 960px; // default: 960px, can be: any unit (pixels, em, percent, etc.)
 
 /*
- * $respond-width and $respond-percent work hand in hand to allow responsive
- * features to work. Think of $respond-width as a list of the max-widths of
- * @media queries. Think of the $respond-percent list as the cooresponding new
- * width of the responsive columns.
+ * Responsive Grids & Rows:
+ * $respond-width and $respond-percent work together to allow the grid and row
+ * .respond classes to function. Think of $respond-width as a list of the
+ * max-widths used in CSS @media queries. Think of the $respond-percent list as the
+ * cooresponding list of widths of the grid or rows child columns.
  *
- * default: 
- * $respond-width: 768px 480px; // must be non-percent unit
- * $respond-percent: 50% 100%; // must be percent
+ * Responsive Columns:
+ * $respond-width and $respond-name are directly linked. Make sure the name list
+ * mirrors the size you want expressed with the name. $respond-percent is not used
+ * for responsive columns.
+ *
+ * Responsive columns cannot be a child of a .respond grid or row!
 */
-$respond-width: 768px 480px;
-$respond-percent: 50% 100%;
+$respond-width: 768px 480px; // default: 768px 480px, can be: any non-percent unit
+$respond-name: tablet phone; // default: tablet phone
+$respond-percent: 50% 100%; // default: 50% 100%, can be: a percent unit
 
 $grid-pad: 20px; // default: 20px, options: any padding parameter
-$gutter: 20px; // default: 20px, options: any non percent unit
+$gutter: 20px; // default: 20px, options: any non-percent unit
 
-$columns: 6; // total column count, options: 1 - 12
-$enable-push-pull: true; // enable push/pull capabilities, options: true | false
-$push-pull-columns: 6; // total push/pull column count, options: 1 - 12
+$columns: 6; // default: 6, options: 0 - 12
+$respond-columns: 6; // default: 6, options: 0 - 12
+$push-pull-columns: 6; // default: 6, options: 0 - 12
+
+$enable-pad: true; // default: true, options: true | false
+$enable-gutter: true; // default: true, options: true | false
+$enable-respond: true; // default: true, options: true | false
+$enable-respond-columns: true; // default: true, options: true | false
+$enable-push-pull: true; // default: true, options: true | false
 
 $grid-float: left; // default: left, options: left | right
 $text-direction: ltr; // default: ltr, options: ltr | rtl
+
+$grid-class: ".g"; // default ".g"
+$row-class: ".r"; // default ".r"
+
+@import "compass/reset"; // optional

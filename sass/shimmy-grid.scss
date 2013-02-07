@@ -1,5 +1,4 @@
 @import "base";
-@import "compass/reset";
 @import "compass/css3";
 
 $push: push-;
@@ -14,7 +13,8 @@ $pull: pull-;
 	$tmp-cols: "";
 
 	@if $include-one-whole == true {
-		$tmp-cols: $tmp-cols + ".one-whole, ";
+		@if $columns > 0 { $tmp-cols: $tmp-cols + ".one-whole"; }
+		@if $columns > 1 { $tmp-cols: $tmp-cols + ", "; }
 	}
 
 	@if $columns > 1 { $tmp-cols: $tmp-cols + ".one-half"; }
@@ -34,12 +34,126 @@ $pull: pull-;
 
 @mixin respond() {
 	&.respond {
+		@if $enable-respond == true {
+			@for $i from 1 through length($respond-width) {
+				@media screen and (max-width: nth($respond-width, $i)) {
+					#{columns(false)} {
+						left: 0;
+						right: 0;
+						width: nth($respond-percent, $i);
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin respond-columns() {
+	@if $enable-respond-columns == true {
 		@for $i from 1 through length($respond-width) {
 			@media screen and (max-width: nth($respond-width, $i)) {
-				#{columns(false)} {
-					left: 0;
-					right: 0;
-					width: nth($respond-percent, $i);
+
+				@if $respond-columns > 0 {
+					.#{nth($respond-name, $i)}-one-whole { width: 100%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 1 {
+					.#{nth($respond-name, $i)}-one-half { width: 50%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 2 {
+					.#{nth($respond-name, $i)}-one-third { width: 33.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-thirds { width: 66.66667%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 3 {
+					.#{nth($respond-name, $i)}-one-fourth { width: 25%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-fourths { @extend .#{nth($respond-name, $i)}-one-half; }
+					.#{nth($respond-name, $i)}-three-fourths { width: 75%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 4 {
+					.#{nth($respond-name, $i)}-one-fifth { width: 20%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-fifths { width: 40%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-three-fifths { width: 60%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-four-fifths { width: 80%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 5 {
+					.#{nth($respond-name, $i)}-one-sixth { width: 16.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-sixths { @extend .#{nth($respond-name, $i)}-one-third; }
+					.#{nth($respond-name, $i)}-three-sixths { @extend .#{nth($respond-name, $i)}-one-half; }
+					.#{nth($respond-name, $i)}-four-sixths { @extend .#{nth($respond-name, $i)}-two-thirds; }
+					.#{nth($respond-name, $i)}-five-sixths { width: 83.33333%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 6 {
+					.#{nth($respond-name, $i)}-one-seventh { width: 14.28571%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-sevenths { width: 28.57142%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-three-sevenths { width: 42.85714%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-four-sevenths { width: 57.14286%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-five-sevenths { width: 71.42858%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-six-sevenths { width: 85.71429%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 7 {
+					.#{nth($respond-name, $i)}-one-eighth { width: 12.5%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-eighths { @extend .#{nth($respond-name, $i)}-one-fourth; }
+					.#{nth($respond-name, $i)}-three-eighths { width: 37.5%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-four-eighths { @extend .#{nth($respond-name, $i)}-one-half; }
+					.#{nth($respond-name, $i)}-five-eighths { width: 62.5%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-six-eights { @extend .#{nth($respond-name, $i)}-three-fourths; }
+					.#{nth($respond-name, $i)}-seven-eighths { width: 87.5%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 8 {
+					.#{nth($respond-name, $i)}-one-ninth { width: 11.11111%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-ninths { width: 22.22222%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-three-ninths { width: 33.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-four-ninths { width: 44.44444%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-five-ninths { width: 55.55556%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-six-ninths { width: 66.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-seven-ninths { width: 77.77778%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-eight-ninths { width: 88.88889%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 9 {
+					.#{nth($respond-name, $i)}-one-tenth { width: 10%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-tenths { @extend .#{nth($respond-name, $i)}-one-fifth; }
+					.#{nth($respond-name, $i)}-three-tenths { width: 30%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-four-tenths { @extend .#{nth($respond-name, $i)}-two-fifths; }
+					.#{nth($respond-name, $i)}-five-tenths { @extend .#{nth($respond-name, $i)}-one-half; }
+					.#{nth($respond-name, $i)}-six-tenths { @extend .#{nth($respond-name, $i)}-three-fifths; }
+					.#{nth($respond-name, $i)}-seven-tenths { width: 70%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-eight-tenths { @extend .#{nth($respond-name, $i)}-four-fifths; }
+					.#{nth($respond-name, $i)}-nine-tenths { width: 90%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 10 {
+					.#{nth($respond-name, $i)}-one-eleventh { width: 9.09091%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-elevenths { width: 18.18182%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-three-elevenths { width: 27.27273%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-four-elevenths { width: 36.36364%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-five-elevenths { width: 45.45455%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-six-elevenths { width: 54.54545%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-seven-elevenths { width: 63.63636%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-eight-elevenths { width: 72.72727%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-nine-elevenths { width: 81.81818%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-ten-elevenths { width: 90.90909%; left: 0; right: 0; }
+				}
+
+				@if $respond-columns > 11 {
+					.#{nth($respond-name, $i)}-one-twelth { width: 8.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-twelths { @extend .#{nth($respond-name, $i)}-one-sixth; }
+					.#{nth($respond-name, $i)}-three-twelths { @extend .#{nth($respond-name, $i)}-one-fourth; }
+					.#{nth($respond-name, $i)}-four-twelths { @extend .#{nth($respond-name, $i)}-one-third; }
+					.#{nth($respond-name, $i)}-five-twelths { width: 41.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-six-twelths { @extend .#{nth($respond-name, $i)}-one-half; }
+					.#{nth($respond-name, $i)}-seven-twelths { width: 58.33334%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-eight-twelths { @extend .#{nth($respond-name, $i)}-two-thirds; }
+					.#{nth($respond-name, $i)}-nine-twelths { @extend .#{nth($respond-name, $i)}-three-fourths; }
+					.#{nth($respond-name, $i)}-ten-twelths { @extend .#{nth($respond-name, $i)}-five-sixths; }
+					.#{nth($respond-name, $i)}-eleven-twelths { width: 91.66667%; left: 0; right: 0; }
 				}
 			}
 		}
@@ -49,11 +163,12 @@ $pull: pull-;
 %column {
 	float: $grid-float;
 	direction: $text-direction;
-	display: inline;
+	display: inline-block;
 }
 
 %clearfix {
 	*zoom:1;
+	clear: both;
 
 	&:before, &:after {
 		content: "";
@@ -70,7 +185,7 @@ $pull: pull-;
 	@include box-sizing(border-box);
 }
 
-.g {
+#{$grid-class} {
 	@extend %clearfix;
 
 	max-width: $width;
@@ -80,53 +195,58 @@ $pull: pull-;
 
 	@include respond();
 
-	&.pad {
-		padding: $grid-pad;
-	}
-
-	&.pad-h {
-		padding-left: $grid-pad;
-		padding-right: $grid-pad;
-	}
-
-	&.pad-v {
-		padding-top: $grid-pad;
-		padding-bottom: $grid-pad;
-	}
-
-	&.gutter {
-		.row, .r {
-			margin-left: -$gutter;
-			margin-top: -$gutter;
+	@if $enable-pad == true {
+		&.pad {
+			padding: $grid-pad;
 		}
 
-		#{columns()} {
-			padding-left: $gutter;
-			padding-top: $gutter;
+		&.pad-h {
+			padding-left: $grid-pad;
+			padding-right: $grid-pad;
+		}
+
+		&.pad-v {
+			padding-top: $grid-pad;
+			padding-bottom: $grid-pad;
 		}
 	}
 
-	&.gutter-v {
-		.row, .r {
-			margin-top: -$gutter;
+	@if $enable-gutter == true {
+		&.gutter {
+			#{$row-class} {
+				margin-left: -$gutter;
+				margin-top: -$gutter;
+			}
+
+			#{columns()} {
+				padding-left: $gutter;
+				padding-top: $gutter;
+			}
 		}
 
-		#{columns()} {
-			padding-top: $gutter;
+		&.gutter-v {
+			#{$row-class} {
+				margin-top: -$gutter;
+			}
+
+			#{columns()} {
+				padding-top: $gutter;
+			}
+		}
+
+		&.gutter-h {
+			#{$row-class} {
+				margin-left: -$gutter;
+			}
+
+			#{columns()} {
+				padding-left: $gutter;
+			}
 		}
 	}
 
-	&.gutter-h {
-		.row, .r {
-			margin-left: -$gutter;
-		}
-
-		#{columns()} {
-			padding-left: $gutter;
-		}
-	}
-
-	.r {
+	#{$row-class} {
+		@extend %clearfix;
 		@include respond();
 	}
 
@@ -134,7 +254,9 @@ $pull: pull-;
 		@extend %column;
 	}
 
-	.one-whole { width: 100%; }
+	@if $columns > 0 {
+		.one-whole { width: 100%; }
+	}
 
 	@if $columns > 1 {
 		.one-half { width: 50%; }
@@ -243,7 +365,9 @@ $pull: pull-;
 				$mod: $pull;
 			}
 
-			.#{$mod}one-whole { position: relative; #{$d}: 100%; }
+			@if $push-pull-columns > 0 {
+				.#{$mod}one-whole { position: relative; #{$d}: 100%; }
+			}
 
 			@if $push-pull-columns > 1 {
 				.#{$mod}one-half { position: relative; #{$d}: 50%; }
@@ -345,4 +469,6 @@ $pull: pull-;
 			}
 		}
 	}
+
+	@include respond-columns();
 }
