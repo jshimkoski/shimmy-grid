@@ -22,9 +22,9 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 		* Default: ltr
 		* Can be: ltr or rtl
 * Infinite grid and row nesting
-* Customizable grid class
+* Default grid class
 	* `.g`
-* Customizable row class
+* Default row class
 	* `.r`
 * Available column classes
 	* `.one-whole`
@@ -61,8 +61,6 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* Pad or gutter the grid horizontally
 		* `<div class="g pad-h gutter-h"></div>`
 * Responsive features at grid, row, or column level
-	* Can be enabled/disabled
-	* Customizable
 	* Grid & row level
 		* Just add a `.respond` class
 			* `<div class="g respond"></div>`
@@ -76,7 +74,6 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 		* Just prepend a column class with `tablet-` or `phone-` to target those devices
 			* `<div class="one-fourth tablet-one-third phone-one-whole"></div>`
 		* Column level responsive classes override the `.respond` class at the grid and/or row level.
-		* Customizable
 * Very easy to use markup
 * Cross browser support: IE 7+, Chrome, Firefox, Safari, Opera
 	* Responsive features not compatible with IE 8 and below
