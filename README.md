@@ -75,6 +75,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* Column level
 		* Just prepend a column class with `tablet-` or `phone-` to target those devices
 			* `<div class="one-fourth tablet-one-third phone-one-whole"></div>`
+		* Column level responsive classes override the `.respond` class at the grid and/or row level.
 		* Customizable
 * Very easy to use markup
 * Cross browser support: IE 7+, Chrome, Firefox, Safari, Opera
@@ -185,9 +186,7 @@ A: Pushed/pulled columns are positioned based on their closest parent element's 
 
 ##Notes
 
-1. Responsive columns cannot be children of a `.respond` grid or row.
-
-2. Push/pull functionality is disabled while in a responsive state.
+1. Push/pull functionality is disabled while in a responsive state.
 
 ##Additional Info
 

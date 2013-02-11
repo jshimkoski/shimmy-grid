@@ -471,4 +471,11 @@ $pull: pull-;
 	}
 
 	@include respond-columns();
+
+	@if $enable-respond == true {
+		&.respond, #{$row-class}.respond {
+			@include respond-columns();
+		}
+	}
+
 }
