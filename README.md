@@ -40,7 +40,6 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* `.one-eleventh`, `.two-elevenths`, `.three-elevenths`, `.four-elevenths`, `.five-elevenths`, `.six-elevenths`, `.seven-elevenths`, `.eight-elevenths`, `.nine-elevenths`, `.ten-elevenths`
 	* `.one-twelth`, `.two-twelths`, `.three-twelths`, `.four-twelths`, `.five-twelths`, `.six-twelths`, `.seven-twelths`, `.eight-twelths`, `.nine-twelths`, `.ten-twelths`, `.eleven-twelths`
 * Push/pull any column
-	* Can be enabled/disabled
 	* Easily adjust total push/pull column count
 		* Default: 6
 		* Can be: 0 - 12
@@ -48,8 +47,6 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* Just prepend `push-` or `pull-` to a column class
 		* `<div class="one-third push-one-sixth"></div>`
 * Optional outside padding and gutters at grid level
-	* Can be enabled/disabled
-	* Easy to adjust sizing
 	* Add a `.pad` class for outside padding
 		* `<div class="g pad"></div>`
 	* Add a `.gutter` class to use gutters
