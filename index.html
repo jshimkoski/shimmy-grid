@@ -1,187 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-	<title>shimmy-grid</title>
+	<title>shimmy-grid Demo</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
 	<link href="stylesheets/shimmy-grid.css" media="screen, projection" rel="stylesheet" type="text/css" />
-	<link href="stylesheets/demo.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
-<div class="g">
-	<div class="r">
-		<div class="one-whole">
+	<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->
 
-			<h1>shimmy-grid Demo</h1>
+	<div class="g">
+		<div class="r">
+			<div class="one-whole">
 
-			<p>Resize browser to test responsive features.</p>
+				<h1>shimmy-grid Demo</h1>
 
-			<h2>All Grid Sizes <small>(6 total columns)</small></h2>
+				<p>Resize browser to test responsive features.</p>
 
-			<div class="g respond pad gutter">
-				<div class="r">
-					<div class="one-whole">
-						<div class="module">.one-whole</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="one-half">
-						<div class="module">.one-half (can be .two-fourths or .three-sixths as well)</div>
-					</div>
-					<div class="one-half">
-						<div class="module">.one-half</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="one-third tablet-one-whole phone-one-half">
-						<div class="module">.one-third (can be .two-sixths as well)</div>
-					</div>
-					<div class="two-thirds tablet-one-whole phone-one-half">
-						<div class="module">.two-thirds (can be .four-sixths as well)</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="one-fourth">
-						<div class="module">.one-fourth</div>
-					</div>
-					<div class="three-fourths">
-						<div class="module">.three-fourth</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="one-fifth">
-						<div class="module">.one-fifth</div>
-					</div>
-					<div class="four-fifths">
-						<div class="module">.four-fifths</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="two-fifths">
-						<div class="module">.two-fifths</div>
-					</div>
-					<div class="three-fifths">
-						<div class="module">.three-fifths</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="one-sixth">
-						<div class="module">.one-sixth</div>
-					</div>
-					<div class="five-sixths">
-						<div class="module">.five-sixths</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="one-third">
-						<div class="module">.one-third</div>
-					</div>
-					<div class="one-sixth">
-						<div class="module">.one-sixth</div>
-					</div>
-					<div class="one-sixth">
-						<div class="module">.one-sixth</div>
-					</div>
-					<div class="one-third">
-						<div class="module">.one-third</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="one-sixth">
-						<div class="module">.one-sixth</div>
-					</div>
-					<div class="two-sixths">
-						<div class="module">.two-sixths</div>
-					</div>
-					<div class="three-sixths">
-						<div class="module">.three-sixths</div>
-					</div>
-				</div>
-			</div>
+				<h2>All Grid Sizes <small>(6 total columns)</small></h2>
 
-			<h2>Nested Grids <small>(nested = dark blue, double nested = dark grey)</small></h2>
-
-			<div class="g gutter">
-				<div class="r respond">
-					<div class="one-fifth">
-						<div class="module">.one-fifth</div>
+				<div class="g respond pad gutter">
+					<div class="r">
+						<div class="one-whole">
+							<div class="module">.one-whole</div>
+						</div>
 					</div>
-					<div class="four-fifths">
-						<div class="r">
-							<div class="one-third">
-								<div class="module nested">.one-third (parent is .four-fifths)</div>
-							</div>
-							<div class="two-thirds">
-								<div class="module nested">.two-thirds (parent is .four-fifths)</div>
-							</div>
+					<div class="r">
+						<div class="one-half">
+							<div class="module">.one-half (can be .two-fourths or .three-sixths as well)</div>
+						</div>
+						<div class="one-half">
+							<div class="module">.one-half</div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="one-third tablet-one-whole phone-one-half">
+							<div class="module">.one-third (can be .two-sixths as well)</div>
+						</div>
+						<div class="two-thirds tablet-one-whole phone-one-half">
+							<div class="module">.two-thirds (can be .four-sixths as well)</div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="one-fourth">
+							<div class="module">.one-fourth</div>
+						</div>
+						<div class="three-fourths">
+							<div class="module">.three-fourth</div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="one-fifth">
+							<div class="module">.one-fifth</div>
+						</div>
+						<div class="four-fifths">
+							<div class="module">.four-fifths</div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="two-fifths">
+							<div class="module">.two-fifths</div>
+						</div>
+						<div class="three-fifths">
+							<div class="module">.three-fifths</div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="one-sixth">
+							<div class="module">.one-sixth</div>
+						</div>
+						<div class="five-sixths">
+							<div class="module">.five-sixths</div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="one-third">
+							<div class="module">.one-third</div>
+						</div>
+						<div class="one-sixth">
+							<div class="module">.one-sixth</div>
+						</div>
+						<div class="one-sixth">
+							<div class="module">.one-sixth</div>
+						</div>
+						<div class="one-third">
+							<div class="module">.one-third</div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="one-sixth">
+							<div class="module">.one-sixth</div>
+						</div>
+						<div class="two-sixths">
+							<div class="module">.two-sixths</div>
+						</div>
+						<div class="three-sixths">
+							<div class="module">.three-sixths</div>
 						</div>
 					</div>
 				</div>
-				<div class="r">
-					<div class="three-fourths">
-						<div class="r respond">
-							<div class="one-third">
-								<div class="module nested">.one-third (parent is .three-fourths)</div>
-							</div>
-							<div class="two-thirds">
-								<div class="r">
-									<div class="one-half">
-										<div class="module nested2x">.one-half (parent is .two-thirds, parent's parent is .three-fourths)</div>
-									</div>
-									<div class="one-half">
-										<div class="module nested2x">.one-half (parent is .two-thirds, parent's parent is .three-fourths)</div>
-									</div>
+
+				<h2>Nested Grids <small>(nested = dark blue, double nested = dark grey)</small></h2>
+
+				<div class="g gutter">
+					<div class="r respond">
+						<div class="one-fifth">
+							<div class="module">.one-fifth</div>
+						</div>
+						<div class="four-fifths">
+							<div class="r">
+								<div class="one-third">
+									<div class="module nested">.one-third (parent is .four-fifths)</div>
+								</div>
+								<div class="two-thirds">
+									<div class="module nested">.two-thirds (parent is .four-fifths)</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="one-fourth">
-						<div class="module">.one-fourth</div>
-					</div>
-				</div>
-			</div>
-
-			<h2>Push/Pull <small>(Push and pull amount is based on nesting level)</small></h2>
-
-			<div class="g respond pad gutter">
-				<div class="r">
-					<div class="one-half pull-one-sixth">
-						<div class="module">.one-half .pull-one-sixth</div>
-					</div>
-					<div class="one-half">
-						<div class="module">.one-half</div>
-					</div>
-				</div>
-				<div class="r">
-					<div class="one-fifth">
-						<div class="module">.one-fifth</div>
-					</div>
-					<div class="four-fifths">
-						<div class="r">
-							<div class="one-third push-one-half">
-								<div class="r">
-									<div class="one-half">
-										<div class="module nested2x">.one-half (parent is .one-third .push-one-half, parent's parent is .four-fifths)</div>
-									</div>
-									<div class="one-half">
-										<div class="module nested2x">.one-half (parent is .one-third .push-one-half, parent's parent is .four-fifths)</div>
+					<div class="r">
+						<div class="three-fourths">
+							<div class="r respond">
+								<div class="one-third">
+									<div class="module nested">.one-third (parent is .three-fourths)</div>
+								</div>
+								<div class="two-thirds">
+									<div class="r">
+										<div class="one-half">
+											<div class="module nested2x">.one-half (parent is .two-thirds, parent's parent is .three-fourths)</div>
+										</div>
+										<div class="one-half">
+											<div class="module nested2x">.one-half (parent is .two-thirds, parent's parent is .three-fourths)</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="two-thirds">
-								<div class="module nested">.two-thirds (parent is .four-fifths)</div>
+						</div>
+						<div class="one-fourth">
+							<div class="module">.one-fourth</div>
+						</div>
+					</div>
+				</div>
+
+				<h2>Push/Pull <small>(Push and pull amount is based on nesting level)</small></h2>
+
+				<div class="g respond pad gutter">
+					<div class="r">
+						<div class="one-half pull-one-sixth">
+							<div class="module">.one-half .pull-one-sixth</div>
+						</div>
+						<div class="one-half">
+							<div class="module">.one-half</div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="one-fifth">
+							<div class="module">.one-fifth</div>
+						</div>
+						<div class="four-fifths">
+							<div class="r">
+								<div class="one-third push-one-half">
+									<div class="r">
+										<div class="one-half">
+											<div class="module nested2x">.one-half (parent is .one-third .push-one-half, parent's parent is .four-fifths)</div>
+										</div>
+										<div class="one-half">
+											<div class="module nested2x">.one-half (parent is .one-third .push-one-half, parent's parent is .four-fifths)</div>
+										</div>
+									</div>
+								</div>
+								<div class="two-thirds">
+									<div class="module nested">.two-thirds (parent is .four-fifths)</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
+			</div>
 		</div>
 	</div>
-</div>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.equalHeight.js"></script>
-<script type="text/javascript" src="js/demo.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<!--
+	<script>
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+	-->
 
 </body>
 </html>
