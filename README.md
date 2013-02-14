@@ -72,10 +72,8 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 			* `<div class="one-fourth tablet-one-third phone-one-whole"></div>`
 		* Column level responsive classes override the `.respond` class at the grid and/or row level.
 * Very easy to use markup
-* Cross browser support: IE 7+, Chrome, Firefox, Safari, Opera
+* Cross browser support: IE 6+, Chrome, Firefox, Safari, Opera
 	* Responsive features not compatible with IE 8 and below
-		* See FAQs
-	* Outside padding and gutters not compatible with IE 7 and below
 		* See FAQs
 
 ##Examples
@@ -169,10 +167,6 @@ A: The global settings are found in the `_base.scss` file.
 Q: Why aren't the responsive features supported on IE 8 and below?
 
 A: Because IE sucks. Those versions of IE aren't found on mobile devices so I wouldn't worry about it.
-
-Q: Why doesn't outside padding or gutters work in IE 7 and below?
-
-A: Again, IE sucks. Put padding on a column's parent element to simulate these features.
 
 Q: How is push/pull calculated?
 

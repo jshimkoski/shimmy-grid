@@ -21,6 +21,36 @@
     }
 }());
 
+// Fix shimmy-grid gutter in ie7 and below
+(function($) {
+	$.fn.boxSizingGutterFix = function(vertical, horizontal) {
+		this.css({'margin': 0, 'padding': 0, 'padding-bottom': horizontal }).children().css({ 'margin': 0, 'padding': 0, 'padding-left': vertical }).each(function(){
+
+			var el = $(this),
+				parent = $(this).parent(),
+				width = el.width(),
+				outerWidth = el.outerWidth(),
+				height = el.height(),
+				outerHeight = el.outerHeight();
+
+			if (parent.is(':last-child')) {
+				parent.css('padding-bottom', 0);
+			}
+
+			if (el.is(':first-child')) {
+				el.css('padding-left', 0);
+			}
+
+			el.outerWidth(outerWidth - (outerWidth - width) - 1);
+
+			if (el.children('g').length > 0 || el.children('r').length > 0) {
+				el.outerHeight(outerHeight - (outerHeight - height));
+			}
+
+		});
+	}
+})(jQuery);
+
 // Sets all columns to same height by grid or by row.
 (function($) {
 	$.fn.equalHeight = function(equalize) {
