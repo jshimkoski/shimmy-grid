@@ -11,7 +11,7 @@ $(document).ready(function() {
 		$('div.module').equalHeight();
 
 		// Fix shimmy-grid gutter in ie7 and below
-		$('html.lt-ie8 div.g').css('visibility', 'visible');
+		$('html.lt-ie8').css('visibility', 'visible');
 	});
 
 });
