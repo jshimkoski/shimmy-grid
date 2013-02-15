@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Shimmy-grid by shimy1984</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Shimmy-grid</h1>
+        <h2>Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.</h2>
+        <a href="https://github.com/shimy1984/shimmy-grid" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>Features</h2>
+
+<ul>
+<li>Built-in optional CSS reset</li>
+<li>Highly customizable and lightweight
+
+<ul>
+<li>Change settings in <code>_base.scss</code>
+</li>
+</ul>
+</li>
+<li>Easy master grid width adjustment
+
+<ul>
+<li>Default: 960px</li>
+<li>Can be: any unit (pixels, em, percent, etc.)</li>
+</ul>
+</li>
+<li>Easily adjust total column count
+
+<ul>
+<li>Default: 6</li>
+<li>Can be: 0 - 12</li>
+</ul>
+</li>
+<li>Great multi-language support
+
+<ul>
+<li>Easy grid float direction adjustment
+
+<ul>
+<li>Default: left</li>
+<li>Can be: left or right</li>
+</ul>
+</li>
+<li>Easy grid text direction adjustment
+
+<ul>
+<li>Default: ltr</li>
+<li>Can be: ltr or rtl</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Infinite grid and row nesting</li>
+<li>Default grid class
+
+<ul>
+<li><code>.g</code></li>
+</ul>
+</li>
+<li>Default row class
+
+<ul>
+<li><code>.r</code></li>
+</ul>
+</li>
+<li>Available column classes
+
+<ul>
+<li><code>.one-whole</code></li>
+<li><code>.one-half</code></li>
+<li>
+<code>.one-third</code>, <code>.two-thirds</code>
+</li>
+<li>
+<code>.one-fourth</code>, <code>.two-fourths</code>, <code>.three-fourths</code>
+</li>
+<li>
+<code>.one-fifth</code>, <code>.two-fifths</code>, <code>.three-fifths</code>, <code>.four-fifths</code>
+</li>
+<li>
+<code>.one-sixth</code>, <code>.two-sixths</code>, <code>.three-sixths</code>, <code>.four-sixths</code>, <code>.five-sixths</code>
+</li>
+<li>
+<code>.one-seventh</code>, <code>.two-sevenths</code>, <code>.three-sevenths</code>, <code>.four-sevenths</code>, <code>.five-sevenths</code>, <code>.six-sevenths</code>
+</li>
+<li>
+<code>.one-eighth</code>, <code>.two-eighths</code>, <code>.three-eighths</code>, <code>.four-eighths</code>, <code>.five-eighths</code>, <code>.six-eighths</code>, <code>.seven-eighths</code>
+</li>
+<li>
+<code>.one-ninth</code>, <code>.two-ninths</code>, <code>.three-ninths</code>, <code>.four-ninths</code>, <code>.five-ninths</code>, <code>.six-ninths</code>, <code>.seven-ninths</code>, <code>.eight-ninths</code>
+</li>
+<li>
+<code>.one-tenth</code>, <code>.two-tenths</code>, <code>.three-tenths</code>, <code>.four-tenths</code>, <code>.five-tenths</code>, <code>.six-tenths</code>, <code>.seven-tenths</code>, <code>.eight-tenths</code>, <code>.nine-tenths</code>
+</li>
+<li>
+<code>.one-eleventh</code>, <code>.two-elevenths</code>, <code>.three-elevenths</code>, <code>.four-elevenths</code>, <code>.five-elevenths</code>, <code>.six-elevenths</code>, <code>.seven-elevenths</code>, <code>.eight-elevenths</code>, <code>.nine-elevenths</code>, <code>.ten-elevenths</code>
+</li>
+<li>
+<code>.one-twelth</code>, <code>.two-twelths</code>, <code>.three-twelths</code>, <code>.four-twelths</code>, <code>.five-twelths</code>, <code>.six-twelths</code>, <code>.seven-twelths</code>, <code>.eight-twelths</code>, <code>.nine-twelths</code>, <code>.ten-twelths</code>, <code>.eleven-twelths</code>
+</li>
+</ul>
+</li>
+<li>Push/pull any column
+
+<ul>
+<li>Easily adjust total push/pull column count
+
+<ul>
+<li>Default: 6</li>
+<li>Can be: 0 - 12</li>
+</ul>
+</li>
+<li>Columns of nested rows can be pushed/pulled as well!</li>
+<li>Just prepend <code>push-</code> or <code>pull-</code> to a column class
+
+<ul>
+<li><code>&lt;div class="one-third push-one-sixth"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Optional outside padding and gutters at grid level
+
+<ul>
+<li>Add a <code>.pad</code> class for outside padding
+
+<ul>
+<li><code>&lt;div class="g pad"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li>Add a <code>.gutter</code> class to use gutters
+
+<ul>
+<li><code>&lt;div class="g gutter"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li>Use <code>.pad</code> and <code>.gutter</code> together
+
+<ul>
+<li><code>&lt;div class="g pad gutter"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li>Pad or gutter the grid vertically
+
+<ul>
+<li><code>&lt;div class="g pad-v gutter-v"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li>Pad or gutter the grid horizontally
+
+<ul>
+<li><code>&lt;div class="g pad-h gutter-h"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responsive features at grid, row, or column level
+
+<ul>
+<li>Grid &amp; row level
+
+<ul>
+<li>Just add a <code>.respond</code> class
+
+<ul>
+<li><code>&lt;div class="g respond"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li>Works with nested rows!</li>
+<li>Works with outside padding and gutters!
+
+<ul>
+<li><code>&lt;div class="g respond pad gutter"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li>Easily defined for any size (tablet and mobile are the default)
+
+<ul>
+<li>Default: when the browser is &lt; 768px all columns in a <code>.respond</code> grid/row will resize to 50% width</li>
+<li>Default: when the browser is &lt; 480px all columns in a <code>.respond</code> grid/row will resize to 100% width</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Column level
+
+<ul>
+<li>Just prepend a column class with <code>tablet-</code> or <code>phone-</code> to target those devices
+
+<ul>
+<li><code>&lt;div class="one-fourth tablet-one-third phone-one-whole"&gt;&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li>Column level responsive classes override the <code>.respond</code> class at the grid and/or row level.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Very easy to use markup</li>
+<li>Cross browser support: IE 6+, Chrome, Firefox, Safari, Opera
+
+<ul>
+<li>Responsive features not compatible with IE 8 and below
+
+<ul>
+<li>See FAQs</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h2>Examples</h2>
+
+<ul>
+<li>Basic:</li>
+</ul><pre><code>&lt;div class="g"&gt;
+    &lt;div class="r"&gt;
+        &lt;div class="one-whole"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="r"&gt;
+        &lt;div class="one-third"&gt;&lt;/div&gt;
+        &lt;div class="two-thirds"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<ul>
+<li>Basic responsive grid:</li>
+</ul><pre><code>&lt;div class="g respond"&gt;
+    &lt;div class="r"&gt;
+        &lt;div class="one-whole"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="r"&gt;
+        &lt;div class="one-third"&gt;&lt;/div&gt;
+        &lt;div class="two-thirds"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<ul>
+<li>Basic grid with gutters and responsive columns:</li>
+</ul><pre><code>&lt;div class="g gutter"&gt;
+    &lt;div class="r"&gt;
+        &lt;div class="one-whole"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="r"&gt;
+        &lt;div class="one-third tablet-one-half phone-one-whole"&gt;&lt;/div&gt;
+        &lt;div class="two-thirds tablet-one-half phone-one-whole"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<ul>
+<li>Outside padding and push/pull:</li>
+</ul><pre><code>&lt;div class="g pad"&gt;
+    &lt;div class="r"&gt;
+        &lt;div class="one-fourth"&gt;&lt;/div&gt;
+        &lt;div class="two-fourths pull-one-sixth"&gt;&lt;/div&gt;
+        &lt;div class="one-fourth push-two-thirds"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<ul>
+<li>Nesting, push/pull, responsive rows, outside padding, and gutters:</li>
+</ul><pre><code>&lt;div class="g pad gutter"&gt;
+    &lt;div class="r"&gt;
+        &lt;div class="one-third pull-two-fifths"&gt;&lt;/div&gt;
+        &lt;div class="two-thirds"&gt;
+            &lt;div class="r"&gt;
+                &lt;div class="one-fourth"&gt;&lt;/div&gt;
+                &lt;div class="three-fourths pull-one-sixth"&gt;
+                    &lt;div class="r respond"&gt;
+                        &lt;div class="one-third"&gt;&lt;/div&gt;
+                        &lt;div class="one-third push-one-half"&gt;&lt;/div&gt;
+                        &lt;div class="one-third"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="r respond"&gt;
+        &lt;div class="one-half"&gt;&lt;/div&gt;
+        &lt;div class="one-half"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>FAQs</h2>
+
+<p>Q: Where can I find the global settings?</p>
+
+<p>A: The global settings are found in the <code>_base.scss</code> file.</p>
+
+<p>Q: Why aren't the responsive features supported on IE 8 and below?</p>
+
+<p>A: Because IE sucks. Those versions of IE aren't found on mobile devices so I wouldn't worry about it.</p>
+
+<p>Q: How is push/pull calculated?</p>
+
+<p>A: Pushed/pulled columns are positioned based on their closest parent element's width. </p>
+
+<h2>Notes</h2>
+
+<ol>
+<li>Push/pull functionality is disabled while in a responsive state.</li>
+</ol><h2>Additional Info</h2>
+
+<p>If you find any bugs or have questions/concerns please let me know.</p>
+
+<p><strong>Thank you for gitting out the word on shimmy-grid! (See what I did there).</strong></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/shimy1984/shimmy-grid/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/shimy1984/shimmy-grid/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/shimy1984/shimmy-grid"></a> is maintained by <a href="https://github.com/shimy1984">shimy1984</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
