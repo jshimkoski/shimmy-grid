@@ -24,7 +24,7 @@
 // Fix shimmy-grid gutter in ie7 and below
 (function($) {
 	$.fn.boxSizingGutterFix = function(vertical, horizontal) {
-		this.css({'margin': 0, 'padding': 0, 'padding-bottom': horizontal }).children().css({ 'margin': 0, 'padding': 0, 'padding-left': vertical }).each(function(){
+		this.css({'margin': 0, 'padding': 0, 'padding-bottom': vertical }).children().css({ 'margin': 0, 'padding': 0, 'padding-left': horizontal }).each(function(){
 
 			var el = $(this),
 				parent = $(this).parent(),
