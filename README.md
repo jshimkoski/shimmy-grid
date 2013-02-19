@@ -38,7 +38,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 	* `.one-ninth`, `.two-ninths`, `.three-ninths`, `.four-ninths`, `.five-ninths`, `.six-ninths`, `.seven-ninths`, `.eight-ninths`
 	* `.one-tenth`, `.two-tenths`, `.three-tenths`, `.four-tenths`, `.five-tenths`, `.six-tenths`, `.seven-tenths`, `.eight-tenths`, `.nine-tenths`
 	* `.one-eleventh`, `.two-elevenths`, `.three-elevenths`, `.four-elevenths`, `.five-elevenths`, `.six-elevenths`, `.seven-elevenths`, `.eight-elevenths`, `.nine-elevenths`, `.ten-elevenths`
-	* `.one-twelth`, `.two-twelths`, `.three-twelths`, `.four-twelths`, `.five-twelths`, `.six-twelths`, `.seven-twelths`, `.eight-twelths`, `.nine-twelths`, `.ten-twelths`, `.eleven-twelths`
+	* `.one-twelfth`, `.two-twelfths`, `.three-twelfths`, `.four-twelfths`, `.five-twelfths`, `.six-twelfths`, `.seven-twelfths`, `.eight-twelfths`, `.nine-twelfths`, `.ten-twelfths`, `.eleven-twelfths`
 * Push/pull any column
 	* Easily adjust total push/pull column count
 		* Default: 6
@@ -167,10 +167,6 @@ A: The global settings are found in the `_base.scss` file.
 Q: Why aren't the responsive features supported on IE 8 and below?
 
 A: Because IE sucks. Those versions of IE aren't found on mobile devices so I wouldn't worry about it.
-
-Q: How is push/pull calculated?
-
-A: Pushed/pulled columns are positioned based on their closest parent element's width. 
 
 ##Notes
 

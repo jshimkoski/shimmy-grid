@@ -27,7 +27,7 @@ $pull: pull-;
 	@if $columns > 8 { $tmp-cols: $tmp-cols + ",.one-ninth, .two-ninths, .three-ninths, .four-ninths, .five-ninths, .six-ninths, .seven-ninths, .eight-ninths"; }
 	@if $columns > 9 { $tmp-cols: $tmp-cols + ",.one-tenth, .two-tenths, .three-tenths, .four-tenths, .five-tenths, .six-tenths, .seven-tenths, .eight-tenths, .nine-tenths"; }
 	@if $columns > 10 { $tmp-cols: $tmp-cols + ",.one-eleventh, .two-elevenths, .three-elevenths, .four-elevenths, .five-elevenths, .six-elevenths, .seven-elevenths, .eight-elevenths, .nine-elevenths, .ten-elevenths"; }
-	@if $columns > 11 { $tmp-cols: $tmp-cols + ",.one-twelth, .two-twelths, .three-twelths, .four-twelths, .five-twelths, .six-twelths, .seven-twelths, .eight-twelths, .nine-twelths, .ten-twelths, .eleven-twelths"; }
+	@if $columns > 11 { $tmp-cols: $tmp-cols + ",.one-twelfth, .two-twelfths, .three-twelfths, .four-twelfths, .five-twelfths, .six-twelfths, .seven-twelfths, .eight-twelfths, .nine-twelfths, .ten-twelfths, .eleven-twelfths"; }
 
 	@return $tmp-cols;
 }
@@ -143,17 +143,17 @@ $pull: pull-;
 				}
 
 				@if $respond-columns > 11 {
-					.#{nth($respond-name, $i)}-one-twelth { width: 8.33333%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-twelths { @extend .#{nth($respond-name, $i)}-one-sixth; }
-					.#{nth($respond-name, $i)}-three-twelths { @extend .#{nth($respond-name, $i)}-one-fourth; }
-					.#{nth($respond-name, $i)}-four-twelths { @extend .#{nth($respond-name, $i)}-one-third; }
-					.#{nth($respond-name, $i)}-five-twelths { width: 41.66667%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-six-twelths { @extend .#{nth($respond-name, $i)}-one-half; }
-					.#{nth($respond-name, $i)}-seven-twelths { width: 58.33334%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-eight-twelths { @extend .#{nth($respond-name, $i)}-two-thirds; }
-					.#{nth($respond-name, $i)}-nine-twelths { @extend .#{nth($respond-name, $i)}-three-fourths; }
-					.#{nth($respond-name, $i)}-ten-twelths { @extend .#{nth($respond-name, $i)}-five-sixths; }
-					.#{nth($respond-name, $i)}-eleven-twelths { width: 91.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-one-twelfth { width: 8.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-two-twelfths { @extend .#{nth($respond-name, $i)}-one-sixth; }
+					.#{nth($respond-name, $i)}-three-twelfths { @extend .#{nth($respond-name, $i)}-one-fourth; }
+					.#{nth($respond-name, $i)}-four-twelfths { @extend .#{nth($respond-name, $i)}-one-third; }
+					.#{nth($respond-name, $i)}-five-twelfths { width: 41.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-six-twelfths { @extend .#{nth($respond-name, $i)}-one-half; }
+					.#{nth($respond-name, $i)}-seven-twelfths { width: 58.33334%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}-eight-twelfths { @extend .#{nth($respond-name, $i)}-two-thirds; }
+					.#{nth($respond-name, $i)}-nine-twelfths { @extend .#{nth($respond-name, $i)}-three-fourths; }
+					.#{nth($respond-name, $i)}-ten-twelfths { @extend .#{nth($respond-name, $i)}-five-sixths; }
+					.#{nth($respond-name, $i)}-eleven-twelfths { width: 91.66667%; left: 0; right: 0; }
 				}
 			}
 		}
@@ -344,17 +344,17 @@ $pull: pull-;
 	}
 
 	@if $columns > 11 {
-		.one-twelth { width: 8.33333%; }
-		.two-twelths { @extend .one-sixth; }
-		.three-twelths { @extend .one-fourth; }
-		.four-twelths { @extend .one-third; }
-		.five-twelths { width: 41.66667%; }
-		.six-twelths { @extend .one-half; }
-		.seven-twelths { width: 58.33334%; }
-		.eight-twelths { @extend .two-thirds; }
-		.nine-twelths { @extend .three-fourths; }
-		.ten-twelths { @extend .five-sixths; }
-		.eleven-twelths { width: 91.66667%; }
+		.one-twelfth { width: 8.33333%; }
+		.two-twelfths { @extend .one-sixth; }
+		.three-twelfths { @extend .one-fourth; }
+		.four-twelfths { @extend .one-third; }
+		.five-twelfths { width: 41.66667%; }
+		.six-twelfths { @extend .one-half; }
+		.seven-twelfths { width: 58.33334%; }
+		.eight-twelfths { @extend .two-thirds; }
+		.nine-twelfths { @extend .three-fourths; }
+		.ten-twelfths { @extend .five-sixths; }
+		.eleven-twelfths { width: 91.66667%; }
 	}
 
 	@if $enable-push-pull == true {
@@ -455,17 +455,17 @@ $pull: pull-;
 			}
 
 			@if $push-pull-columns > 11 {
-				.#{$mod}one-twelth { position: relative; #{$d}: 8.33333%; }
-				.#{$mod}two-twelths { @extend .#{$mod}one-sixth; }
-				.#{$mod}three-twelths { @extend .#{$mod}one-fourth; }
-				.#{$mod}four-twelths { @extend .#{$mod}one-third; }
-				.#{$mod}five-twelths { position: relative; #{$d}: 41.66667%; }
-				.#{$mod}six-twelths { @extend .#{$mod}one-half; }
-				.#{$mod}seven-twelths { position: relative; #{$d}: 58.33334%; }
-				.#{$mod}eight-twelths { @extend .#{$mod}two-thirds; }
-				.#{$mod}nine-twelths { @extend .#{$mod}three-fourths; }
-				.#{$mod}ten-twelths { @extend .#{$mod}five-sixths; }
-				.#{$mod}eleven-twelths { position: relative; #{$d}: 91.66667%; }
+				.#{$mod}one-twelfth { position: relative; #{$d}: 8.33333%; }
+				.#{$mod}two-twelfths { @extend .#{$mod}one-sixth; }
+				.#{$mod}three-twelfths { @extend .#{$mod}one-fourth; }
+				.#{$mod}four-twelfths { @extend .#{$mod}one-third; }
+				.#{$mod}five-twelfths { position: relative; #{$d}: 41.66667%; }
+				.#{$mod}six-twelfths { @extend .#{$mod}one-half; }
+				.#{$mod}seven-twelfths { position: relative; #{$d}: 58.33334%; }
+				.#{$mod}eight-twelfths { @extend .#{$mod}two-thirds; }
+				.#{$mod}nine-twelfths { @extend .#{$mod}three-fourths; }
+				.#{$mod}ten-twelfths { @extend .#{$mod}five-sixths; }
+				.#{$mod}eleven-twelfths { position: relative; #{$d}: 91.66667%; }
 			}
 		}
 	}
