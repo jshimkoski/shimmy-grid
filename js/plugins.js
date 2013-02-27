@@ -1,4 +1,4 @@
-// Avoid `console` errors in browsers that lack a console
+// Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
     var noop = function () {};
@@ -21,10 +21,25 @@
     }
 }());
 
-// Fix shimmy-grid gutter in ie7 and below
+// Fix shimmy-grid gutter in ie7 and below.
 (function($) {
+	var fixWidths = [];
+	var fixRun = false;
+
 	$.fn.ieGutterFix = function(vertical, horizontal) {
-		this.css({'margin': 0, 'padding': 0, 'padding-bottom': vertical }).children().css({ 'margin': 0, 'padding': 0, 'padding-left': horizontal }).each(function(){
+		this.css({'margin': 0, 'padding': 0, 'padding-bottom': vertical }).children()
+			.css({ 'margin': 0, 'padding': 0, 'padding-left': horizontal }).each(function(i){
+
+			if (fixRun === false) {
+				var tempEl = $(this),
+					w = tempEl.width(),
+					pWidth = tempEl.parent().width(),
+					percent = 100*w/pWidth;
+
+				fixWidths[i] = percent;
+			}
+
+			$(this).width(fixWidths[i] + "%");
 
 			var el = $(this),
 				parent = el.parent(),
@@ -41,26 +56,28 @@
 			el.outerWidth(width - 1);
 
 		});
+
+		fixRun = true;
 	}
 })(jQuery);
 
-// Sets all columns to same height by grid or by row
+// Sets all columns to same height globally or by parent row.
 (function($) {
 	$.fn.equalHeight = function(equalize) {
 		if (equalize === true) {
-			return this.height(Math.max.apply(this,$.map(this,function(e){return $(e).height()})));
+			return this.height('100%').height(Math.max.apply(this,$.map(this,function(e){return $(e).height()})));
 		} else {
-			var currentTallest = 0,
+			var currentTallest = 0,   
 				currentRowStart = 0,
 				rowDivs = [],
 				el = null,
 				topPosition = 0;
-			this.css('height', 'inherit').each(function() {
+			this.height('100%').each(function() {
 				el = $(this);
 				topPosition = el.offset().top;
 				if (currentRowStart !== topPosition) {
 					// we just came to a new row.  Set all the heights on the completed row
-					for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+					for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
 						rowDivs[currentDiv].height(currentTallest);
 					}
 					// set the variables for the new row
@@ -74,7 +91,7 @@
 					currentTallest = Math.max(currentTallest, el.height());
 				}
 				// do the last row
-				for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+				for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
 					rowDivs[currentDiv].height(currentTallest);
 				}
 			});
