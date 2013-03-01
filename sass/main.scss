@@ -1,11 +1,6 @@
 @import "compass";
 @import "compass/css3/border-radius";
 
-// Fix shimmy-grid gutter in ie7 and below
-html.lt-ie8 {
-	visibility: hidden;
-}
-
 body {
 	margin: 20px;
 	font: 14px/28px Verdana, Arial, sans-serif;

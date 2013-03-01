@@ -23,61 +23,63 @@
 
 // Fix shimmy-grid gutter in ie7 and below.
 (function($) {
-	var fixWidths = [];
-	var fixRun = false;
+	var fixWidths = [],
+		fixRun = false;
 
 	$.fn.ieGutterFix = function(vertical, horizontal) {
-		this.css({'margin': 0, 'padding': 0, 'padding-bottom': vertical }).children()
-			.css({ 'margin': 0, 'padding': 0, 'padding-left': horizontal }).each(function(i){
+		var self = this;
+		if (self.length) {
+			self.css({'margin': 0, 'padding': 0, 'padding-bottom': vertical }).children()
+				.css({ 'margin': 0, 'padding': 0, 'padding-left': horizontal }).each(function(i){
 
-			if (fixRun === false) {
-				var tempEl = $(this),
-					w = tempEl.width(),
-					pWidth = tempEl.parent().width(),
-					percent = 100*w/pWidth;
+				var el = $(this),
+					parent = el.parent(),
+					width = el.width();
 
-				fixWidths[i] = percent;
-			}
+				if (fixRun === false) {
+					var pWidth = parent.width(),
+						percent = 100*width/pWidth + "%";
 
-			$(this).width(fixWidths[i] + "%");
+					fixWidths[i] = percent;
+				}
 
-			var el = $(this),
-				parent = el.parent(),
-				width = el.width();
+				if (parent.is(':last-child')) {
+					parent.css('padding-bottom', 0);
+				}
 
-			if (parent.is(':last-child')) {
-				parent.css('padding-bottom', 0);
-			}
+				if (el.is(':first-child')) {
+					el.css('padding-left', 0);
+				}
 
-			if (el.is(':first-child')) {
-				el.css('padding-left', 0);
-			}
+				width = el.width(fixWidths[i]).width() - 1;
 
-			el.outerWidth(width - 1);
+				el.outerWidth(width);
 
-		});
+			});
 
-		fixRun = true;
+			fixRun = true;
+		}
 	}
 })(jQuery);
 
 // Sets all columns to same height globally or by parent row.
 (function($) {
 	$.fn.equalHeight = function(equalize) {
+		var self = this;
 		if (equalize === true) {
-			return this.height('100%').height(Math.max.apply(this,$.map(this,function(e){return $(e).height()})));
+			return self.height('100%').height(Math.max.apply(this,$.map(this,function(e){return $(e).height()})));
 		} else {
 			var currentTallest = 0,   
 				currentRowStart = 0,
 				rowDivs = [],
 				el = null,
 				topPosition = 0;
-			this.height('100%').each(function() {
+			self.height('100%').each(function() {
 				el = $(this);
 				topPosition = el.offset().top;
 				if (currentRowStart !== topPosition) {
 					// we just came to a new row.  Set all the heights on the completed row
-					for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+					for (var currentDiv = 0, len = rowDivs.length; currentDiv < len; currentDiv++) {
 						rowDivs[currentDiv].height(currentTallest);
 					}
 					// set the variables for the new row
@@ -91,10 +93,40 @@
 					currentTallest = Math.max(currentTallest, el.height());
 				}
 				// do the last row
-				for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+				for (var currentDiv = 0, len = rowDivs.length; currentDiv < len; currentDiv++) {
 					rowDivs[currentDiv].height(currentTallest);
 				}
 			});
 		}
 	}
 })(jQuery);
+
+// shimmy-grid implementation
+var shimmy = shimmy || {};
+shimmy.Grid = function(options) {
+	var self = this;
+	self.options = $.extend({
+		ieGutterEl: $('html.lt-ie8 div.g.gutter div.r'),
+		ieGutterVEl: $('html.lt-ie8 div.g.gutter-v div.r'),
+		ieGutterHEl: $('html.lt-ie8 div.g.gutter-h div.r'),
+		ieGutterV: 20,
+		ieGutterH: 20,
+		moduleEl: $('div.module'),
+		isLtIE8: $('html').hasClass('lt-ie8'),
+		useEqualHeight: false,
+		equalizeAll: false
+	}, options || {});
+}
+shimmy.Grid.prototype.init = function(options) {
+	var self = this,
+		o = $.extend(self.options, options || {});
+
+	// Fix shimmy-grid gutter in ie7 and below
+	if (o.isLtIE8) {
+		o.ieGutterEl.ieGutterFix(o.ieGutterV, o.ieGutterH);
+		o.ieGutterVEl.ieGutterFix(o.ieGutterV, 0);
+		o.ieGutterHEl.ieGutterFix(0, o.ieGutterH);
+	}
+	// Set shimmy-grid columns to equal height by row
+	if (o.useEqualHeight) o.moduleEl.equalHeight(o.equalizeAll);
+}

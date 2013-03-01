@@ -14,6 +14,10 @@
 
 	<link href="stylesheets/shimmy-grid.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<link href="stylesheets/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+	<!-- Hide shimmy-grid in ie7 and below, display pop fix -->
+	<!--[if lt IE 8]> <style>html.lt-ie8 body{visibility: hidden;}</style> <![endif]-->
+
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -202,6 +206,9 @@
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
 	-->
+
+	<!-- Show shimmy-grid in ie7 and below, display pop fix -->
+	<!--[if lt IE 8]> <style>html.lt-ie8 body{visibility: visible;}</style> <![endif]-->
 
 </body>
 </html>
