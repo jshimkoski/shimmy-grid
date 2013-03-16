@@ -102,10 +102,11 @@
 })(jQuery);
 
 // shimmy-grid implementation
-var shimmy = shimmy || {};
-shimmy.Grid = function(options) {
-	var self = this;
-	self.options = $.extend({
+(function($){
+
+	$.shimmyGrid = plugin;
+
+	$.shimmyGrid.defaults = {
 		ieGutterEl: $('html.lt-ie8 div.g.gutter div.r'),
 		ieGutterVEl: $('html.lt-ie8 div.g.gutter-v div.r'),
 		ieGutterHEl: $('html.lt-ie8 div.g.gutter-h div.r'),
@@ -115,18 +116,35 @@ shimmy.Grid = function(options) {
 		isLtIE8: $('html').hasClass('lt-ie8'),
 		useEqualHeight: false,
 		equalizeAll: false
-	}, options || {});
-}
-shimmy.Grid.prototype.init = function(options) {
-	var self = this,
-		o = $.extend(self.options, options || {});
+	};
 
-	// Fix shimmy-grid gutter in ie7 and below
-	if (o.isLtIE8) {
-		o.ieGutterEl.ieGutterFix(o.ieGutterV, o.ieGutterH);
-		o.ieGutterVEl.ieGutterFix(o.ieGutterV, 0);
-		o.ieGutterHEl.ieGutterFix(0, o.ieGutterH);
+	var methods = {
+		init: init
+	};
+
+	function init(options) {
+
+		var o = $.extend({}, $.shimmyGrid.defaults, options);
+
+		// Fix shimmy-grid gutter in ie7 and below
+		if (o.isLtIE8) {
+			o.ieGutterEl.ieGutterFix(o.ieGutterV, o.ieGutterH);
+			o.ieGutterVEl.ieGutterFix(o.ieGutterV, 0);
+			o.ieGutterHEl.ieGutterFix(0, o.ieGutterH);
+		}
+		// Set shimmy-grid columns to equal height by row
+		if (o.useEqualHeight) o.moduleEl.equalHeight(o.equalizeAll);
+
 	}
-	// Set shimmy-grid columns to equal height by row
-	if (o.useEqualHeight) o.moduleEl.equalHeight(o.equalizeAll);
-}
+
+	function plugin(method) {
+		if (methods[method]) {
+			return methods[method].apply(this, [].slice.call(arguments, 1));
+		} else if (typeof method === 'object' || !method) {
+			return methods.init.apply(this, arguments);
+		} else {
+			$.error('Method ' + method + ' does not exist on jQuery.shimmyGrid()');
+		}
+	}
+
+})(jQuery);

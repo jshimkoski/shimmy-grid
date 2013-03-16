@@ -1,10 +1,9 @@
 $(function() {
 
-	var sg = new shimmy.Grid({useEqualHeight: true});
-	sg.init();
+	$.shimmyGrid();
 
 	$(window).on('resize', function() {
-		sg.init();
+		$.shimmyGrid();
 	});
 
 });
