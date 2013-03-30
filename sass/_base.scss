@@ -11,8 +11,6 @@ $width: 960px; // default: 960px, can be: any unit (pixels, em, percent, etc.)
  * $respond-width and $respond-name are directly linked. Make sure the name list
  * mirrors the size you want expressed with the name. $respond-percent is not used
  * for responsive columns.
- *
- * Responsive columns cannot be a child of a .respond grid or row!
 */
 $respond-width: 768px 480px; // default: 768px 480px, can be: any non-percent unit
 $respond-name: tablet phone; // default: tablet phone

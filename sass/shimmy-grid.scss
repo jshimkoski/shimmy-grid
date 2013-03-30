@@ -53,6 +53,9 @@ $pull: pull-;
 		@for $i from 1 through length($respond-width) {
 			@media screen and (max-width: nth($respond-width, $i)) {
 
+				.#{nth($respond-name, $i)}-hidden { display: none; }
+				.#{nth($respond-name, $i)}-offscreen { position: absolute; left: -9999px; }
+
 				@if $respond-columns > 0 {
 					.#{nth($respond-name, $i)}-one-whole { width: 100%; left: 0; right: 0; }
 				}
