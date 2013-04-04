@@ -72,6 +72,7 @@ Succinct Sass/Compass CSS structuring grid that is all brains and no fluff.
 			* `<div class="one-fourth tablet-one-third phone-one-whole"></div>`
 		* Column level responsive classes override the `.respond` class at the grid and/or row level.
 		* Hide or position columns offscreen using `.tablet-hidden`, `.tablet-offscreen`, `.phone-hidden`, `.phone-offscreen`
+		* Easily define device orientation, for example: `.tablet-portrait-one-third`, `.phone-landscape-two-fifths`
 * Very easy to use markup
 * Cross browser support: IE 6+, Chrome, Firefox, Safari, Opera
 	* Responsive features not compatible with IE 8 and below

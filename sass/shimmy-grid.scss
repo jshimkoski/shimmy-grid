@@ -36,7 +36,7 @@ $pull: pull-;
 	&.respond {
 		@if $enable-respond == true {
 			@for $i from 1 through length($respond-width) {
-				@media screen and (max-width: nth($respond-width, $i)) {
+				@media only screen and (max-width: nth($respond-width, $i)) {
 					#{columns(false)} {
 						left: 0;
 						right: 0;
@@ -48,115 +48,130 @@ $pull: pull-;
 	}
 }
 
-@mixin respond-columns() {
-	@if $enable-respond-columns == true {
-		@for $i from 1 through length($respond-width) {
-			@media screen and (max-width: nth($respond-width, $i)) {
+@mixin media-query($width, $orientation) {
+	@if $orientation == null {
+		@media only screen and (max-width: $width) { @content; }
+	} @else {
+		@media only screen and (max-width: $width) and (orientation: $orientation) { @content; }
+	}
+}
 
-				.#{nth($respond-name, $i)}-hidden { display: none; }
-				.#{nth($respond-name, $i)}-offscreen { position: absolute; left: -9999px; }
+@mixin respond-columns($orientation) {
+	@if $enable-respond-columns == true {
+
+		@for $i from 1 through length($respond-width) {
+
+			@include media-query(nth($respond-width, $i), $orientation) {
+
+				$orient: "";
+				@if $orientation != null {
+					$orient: "-"#{$orientation}"";
+				}
+
+				.#{nth($respond-name, $i)}#{$orient}-hidden { display: none; }
+				.#{nth($respond-name, $i)}#{$orient}-offscreen { position: absolute; left: -9999px; }
 
 				@if $respond-columns > 0 {
-					.#{nth($respond-name, $i)}-one-whole { width: 100%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-whole { width: 100%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 1 {
-					.#{nth($respond-name, $i)}-one-half { width: 50%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-half { width: 50%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 2 {
-					.#{nth($respond-name, $i)}-one-third { width: 33.33333%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-thirds { width: 66.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-third { width: 33.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-thirds { width: 66.66667%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 3 {
-					.#{nth($respond-name, $i)}-one-fourth { width: 25%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-fourths { @extend .#{nth($respond-name, $i)}-one-half; }
-					.#{nth($respond-name, $i)}-three-fourths { width: 75%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-fourth { width: 25%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-fourths { width: 50%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-fourths { width: 75%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 4 {
-					.#{nth($respond-name, $i)}-one-fifth { width: 20%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-fifths { width: 40%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-three-fifths { width: 60%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-four-fifths { width: 80%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-fifth { width: 20%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-fifths { width: 40%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-fifths { width: 60%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-four-fifths { width: 80%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 5 {
-					.#{nth($respond-name, $i)}-one-sixth { width: 16.66667%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-sixths { @extend .#{nth($respond-name, $i)}-one-third; }
-					.#{nth($respond-name, $i)}-three-sixths { @extend .#{nth($respond-name, $i)}-one-half; }
-					.#{nth($respond-name, $i)}-four-sixths { @extend .#{nth($respond-name, $i)}-two-thirds; }
-					.#{nth($respond-name, $i)}-five-sixths { width: 83.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-sixth { width: 16.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-sixths { width: 33.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-sixths { width: 50%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-four-sixths { width: 66.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-five-sixths { width: 83.33333%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 6 {
-					.#{nth($respond-name, $i)}-one-seventh { width: 14.28571%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-sevenths { width: 28.57142%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-three-sevenths { width: 42.85714%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-four-sevenths { width: 57.14286%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-five-sevenths { width: 71.42858%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-six-sevenths { width: 85.71429%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-seventh { width: 14.28571%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-sevenths { width: 28.57142%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-sevenths { width: 42.85714%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-four-sevenths { width: 57.14286%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-five-sevenths { width: 71.42858%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-six-sevenths { width: 85.71429%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 7 {
-					.#{nth($respond-name, $i)}-one-eighth { width: 12.5%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-eighths { @extend .#{nth($respond-name, $i)}-one-fourth; }
-					.#{nth($respond-name, $i)}-three-eighths { width: 37.5%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-four-eighths { @extend .#{nth($respond-name, $i)}-one-half; }
-					.#{nth($respond-name, $i)}-five-eighths { width: 62.5%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-six-eights { @extend .#{nth($respond-name, $i)}-three-fourths; }
-					.#{nth($respond-name, $i)}-seven-eighths { width: 87.5%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-eighth { width: 12.5%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-eighths { width: 25%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-eighths { width: 37.5%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-four-eighths { width: 50%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-five-eighths { width: 62.5%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-six-eights { width: 75%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-seven-eighths { width: 87.5%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 8 {
-					.#{nth($respond-name, $i)}-one-ninth { width: 11.11111%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-ninths { width: 22.22222%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-three-ninths { width: 33.33333%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-four-ninths { width: 44.44444%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-five-ninths { width: 55.55556%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-six-ninths { width: 66.66667%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-seven-ninths { width: 77.77778%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-eight-ninths { width: 88.88889%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-ninth { width: 11.11111%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-ninths { width: 22.22222%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-ninths { width: 33.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-four-ninths { width: 44.44444%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-five-ninths { width: 55.55556%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-six-ninths { width: 66.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-seven-ninths { width: 77.77778%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-eight-ninths { width: 88.88889%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 9 {
-					.#{nth($respond-name, $i)}-one-tenth { width: 10%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-tenths { @extend .#{nth($respond-name, $i)}-one-fifth; }
-					.#{nth($respond-name, $i)}-three-tenths { width: 30%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-four-tenths { @extend .#{nth($respond-name, $i)}-two-fifths; }
-					.#{nth($respond-name, $i)}-five-tenths { @extend .#{nth($respond-name, $i)}-one-half; }
-					.#{nth($respond-name, $i)}-six-tenths { @extend .#{nth($respond-name, $i)}-three-fifths; }
-					.#{nth($respond-name, $i)}-seven-tenths { width: 70%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-eight-tenths { @extend .#{nth($respond-name, $i)}-four-fifths; }
-					.#{nth($respond-name, $i)}-nine-tenths { width: 90%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-tenth { width: 10%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-tenths { width: 20%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-tenths { width: 30%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-four-tenths { width: 40%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-five-tenths { width: 50%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-six-tenths { width: 60%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-seven-tenths { width: 70%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-eight-tenths { width: 80%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-nine-tenths { width: 90%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 10 {
-					.#{nth($respond-name, $i)}-one-eleventh { width: 9.09091%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-elevenths { width: 18.18182%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-three-elevenths { width: 27.27273%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-four-elevenths { width: 36.36364%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-five-elevenths { width: 45.45455%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-six-elevenths { width: 54.54545%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-seven-elevenths { width: 63.63636%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-eight-elevenths { width: 72.72727%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-nine-elevenths { width: 81.81818%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-ten-elevenths { width: 90.90909%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-eleventh { width: 9.09091%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-elevenths { width: 18.18182%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-elevenths { width: 27.27273%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-four-elevenths { width: 36.36364%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-five-elevenths { width: 45.45455%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-six-elevenths { width: 54.54545%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-seven-elevenths { width: 63.63636%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-eight-elevenths { width: 72.72727%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-nine-elevenths { width: 81.81818%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-ten-elevenths { width: 90.90909%; left: 0; right: 0; }
 				}
 
 				@if $respond-columns > 11 {
-					.#{nth($respond-name, $i)}-one-twelfth { width: 8.33333%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-two-twelfths { @extend .#{nth($respond-name, $i)}-one-sixth; }
-					.#{nth($respond-name, $i)}-three-twelfths { @extend .#{nth($respond-name, $i)}-one-fourth; }
-					.#{nth($respond-name, $i)}-four-twelfths { @extend .#{nth($respond-name, $i)}-one-third; }
-					.#{nth($respond-name, $i)}-five-twelfths { width: 41.66667%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-six-twelfths { @extend .#{nth($respond-name, $i)}-one-half; }
-					.#{nth($respond-name, $i)}-seven-twelfths { width: 58.33334%; left: 0; right: 0; }
-					.#{nth($respond-name, $i)}-eight-twelfths { @extend .#{nth($respond-name, $i)}-two-thirds; }
-					.#{nth($respond-name, $i)}-nine-twelfths { @extend .#{nth($respond-name, $i)}-three-fourths; }
-					.#{nth($respond-name, $i)}-ten-twelfths { @extend .#{nth($respond-name, $i)}-five-sixths; }
-					.#{nth($respond-name, $i)}-eleven-twelfths { width: 91.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-one-twelfth { width: 8.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-two-twelfths { width: 16.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-three-twelfths { width: 25%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-four-twelfths { width: 33.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-five-twelfths { width: 41.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-six-twelfths { width: 50%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-seven-twelfths { width: 58.33334%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-eight-twelfths { width: 66.66667%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-nine-twelfths { width: 75%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-ten-twelfths { width: 83.33333%; left: 0; right: 0; }
+					.#{nth($respond-name, $i)}#{$orient}-eleven-twelfths { width: 91.66667%; left: 0; right: 0; }
 				}
 			}
 		}
@@ -473,11 +488,15 @@ $pull: pull-;
 		}
 	}
 
-	@include respond-columns();
+	@for $i from 1 through length($respond-orientation) {
+		@include respond-columns(nth($respond-orientation, $i));
+	}
 
 	@if $enable-respond == true {
 		&.respond, #{$row-class}.respond {
-			@include respond-columns();
+			@for $i from 1 through length($respond-orientation) {
+				@include respond-columns(nth($respond-orientation, $i));
+			}
 		}
 	}
 

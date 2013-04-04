@@ -14,6 +14,7 @@ $width: 960px; // default: 960px, can be: any unit (pixels, em, percent, etc.)
 */
 $respond-width: 768px 480px; // default: 768px 480px, can be: any non-percent unit
 $respond-name: tablet phone; // default: tablet phone
+$respond-orientation: null portrait landscape; // default: null portrait landscape, must be at least: null
 $respond-percent: 50% 100%; // default: 50% 100%, can be: a percent unit
 
 $grid-pad: 20px; // default: 20px, options: any padding parameter
